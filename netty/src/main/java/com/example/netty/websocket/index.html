@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Client</title>
+
+    <script>
+        if(window.WebSocket) {
+            var ws = new WebSocket("ws://localhost:8080/hello");
+            ws.onopen = event => {
+                document.getElementById('responsetext').value="connected...";
+            }
+            ws.onclose = function (event) {
+                document.getElementById('responsetext').value += "\n" + "disconnected";
+            }
+            ws.onmessage = function(event) {
+                document.getElementById('responsetext').value += "\n" + event.data;
+            }
+        } else {
+            alert("WebSocket is not supported");
+        }
+
+        function sendMsg() {
+            var messageComp = document.getElementById("message");
+            ws.send(messageComp.value);
+            messageComp.value = '';
+        }
+
+    </script>
+</head>
+<body>
+
+<form name="form">
+    <textarea id="message" style="height: 300px;width: 300px"></textarea>
+    <input type="button" name="send" value="Send..." onclick="sendMsg()">
+    <textarea id="responsetext" style="height: 300px;width: 300px"></textarea>
+    <input type="button" name="clear" value="clear" onclick="document.getElementById('responsetext').value=''">
+</form>
+</body>
+</html>
