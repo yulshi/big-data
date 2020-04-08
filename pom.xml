@@ -16,6 +16,13 @@
         <module>scala</module>
         <module>netty</module>
         <module>zz-misc</module>
+        <module>redis</module>
+        <module>hive</module>
+        <module>hbase</module>
+        <module>flume</module>
+        <module>flink</module>
+        <module>help</module>
+        <module>hot-items</module>
     </modules>
 
     <properties>

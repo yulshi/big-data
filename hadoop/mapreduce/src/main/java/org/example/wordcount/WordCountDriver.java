@@ -56,6 +56,8 @@ public class WordCountDriver {
         FileInputFormat.addInputPath(job, new Path(inputDir));
         FileOutputFormat.setOutputPath(job, new Path(outputDir));
 
+        job.setCombinerClass(WordCountCombiner.class);
+        //job.setNumReduceTasks(0);
         // Compress
 //        FileOutputFormat.setCompressOutput(job, true);
 //        FileOutputFormat.setOutputCompressorClass(job, BZip2Codec.class);

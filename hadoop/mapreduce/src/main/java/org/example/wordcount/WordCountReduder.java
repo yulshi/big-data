@@ -20,7 +20,7 @@ public class WordCountReduder extends Reducer<Text, IntWritable, Text, IntWritab
         // summerize the the word count
         int sum = 0;
         for (IntWritable value : values) {
-            sum += 1;
+            sum += value.get();
         }
 
         // Write out the output

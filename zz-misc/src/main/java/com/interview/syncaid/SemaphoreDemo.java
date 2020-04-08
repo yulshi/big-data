@@ -10,29 +10,30 @@ import java.util.concurrent.TimeUnit;
  */
 public class SemaphoreDemo {
 
-    private static final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss ");
-    public static void main(String[] args) {
-        Semaphore available = new Semaphore(3);
+  private static final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss ");
 
-        for (int i = 0; i < 6; i++) {
+  public static void main(String[] args) {
+    Semaphore available = new Semaphore(3);
 
-            new Thread(() -> {
-                try {
-                    available.acquire();
-                    log(" got one pos");
-                    TimeUnit.SECONDS.sleep(2);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } finally {
-                    available.release();
-                    log(" free this pos");
-                }
-            }, String.valueOf(i + 1)).start();
+    for (int i = 0; i < 6; i++) {
 
+      new Thread(() -> {
+        try {
+          available.acquire();
+          log(" got one pos");
+          TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        } finally {
+          available.release();
+          log(" free this pos");
         }
-    }
+      }, String.valueOf(i + 1)).start();
 
-    private static void log(String msg) {
-        System.out.println(sdf.format(new Date()) + Thread.currentThread().getName() + ": " + msg);
     }
+  }
+
+  private static void log(String msg) {
+    System.out.println(sdf.format(new Date()) + Thread.currentThread().getName() + ": " + msg);
+  }
 }
