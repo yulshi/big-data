@@ -10,15 +10,17 @@ package io.grpc.examples.routeguide;
  *
  * Protobuf type {@code routeguide.RouteNote}
  */
-public  final class RouteNote extends
-    com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:routeguide.RouteNote)
-    RouteNoteOrBuilder {
-private static final long serialVersionUID = 0L;
+public final class RouteNote extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:routeguide.RouteNote)
+        RouteNoteOrBuilder {
+  private static final long serialVersionUID = 0L;
+
   // Use RouteNote.newBuilder() to construct.
   private RouteNote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private RouteNote() {
     message_ = "";
   }
@@ -26,7 +28,7 @@ private static final long serialVersionUID = 0L;
   @Override
   @SuppressWarnings({"unused"})
   protected Object newInstance(
-      UnusedPrivateParameter unused) {
+          UnusedPrivateParameter unused) {
     return new RouteNote();
   }
 
@@ -35,16 +37,17 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
+
   private RouteNote(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
       throw new NullPointerException();
     }
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
+            com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
       boolean done = false;
       while (!done) {
@@ -74,7 +77,7 @@ private static final long serialVersionUID = 0L;
           }
           default: {
             if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
+                    input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
             break;
@@ -85,27 +88,29 @@ private static final long serialVersionUID = 0L;
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+              e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
+
   public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+  getDescriptor() {
     return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_RouteNote_descriptor;
   }
 
   @Override
   protected FieldAccessorTable
-      internalGetFieldAccessorTable() {
+  internalGetFieldAccessorTable() {
     return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_RouteNote_fieldAccessorTable
-        .ensureFieldAccessorsInitialized(
-            RouteNote.class, Builder.class);
+            .ensureFieldAccessorsInitialized(
+                    RouteNote.class, Builder.class);
   }
 
   public static final int LOCATION_FIELD_NUMBER = 1;
   private Point location_;
+
   /**
    * <pre>
    * The location from which the message is sent.
@@ -117,6 +122,7 @@ private static final long serialVersionUID = 0L;
   public boolean hasLocation() {
     return location_ != null;
   }
+
   /**
    * <pre>
    * The location from which the message is sent.
@@ -128,6 +134,7 @@ private static final long serialVersionUID = 0L;
   public Point getLocation() {
     return location_ == null ? Point.getDefaultInstance() : location_;
   }
+
   /**
    * <pre>
    * The location from which the message is sent.
@@ -141,6 +148,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int MESSAGE_FIELD_NUMBER = 2;
   private volatile Object message_;
+
   /**
    * <pre>
    * The message to be sent.
@@ -154,13 +162,14 @@ private static final long serialVersionUID = 0L;
     if (ref instanceof String) {
       return (String) ref;
     } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
+      com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
       String s = bs.toStringUtf8();
       message_ = s;
       return s;
     }
   }
+
   /**
    * <pre>
    * The message to be sent.
@@ -170,12 +179,12 @@ private static final long serialVersionUID = 0L;
    * @return The bytes for message.
    */
   public com.google.protobuf.ByteString
-      getMessageBytes() {
+  getMessageBytes() {
     Object ref = message_;
     if (ref instanceof String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (String) ref);
+      com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8(
+                      (String) ref);
       message_ = b;
       return b;
     } else {
@@ -184,6 +193,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -196,7 +206,7 @@ private static final long serialVersionUID = 0L;
 
   @Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+          throws java.io.IOException {
     if (location_ != null) {
       output.writeMessage(1, getLocation());
     }
@@ -214,7 +224,7 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (location_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getLocation());
+              .computeMessageSize(1, getLocation());
     }
     if (!getMessageBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
@@ -227,7 +237,7 @@ private static final long serialVersionUID = 0L;
   @Override
   public boolean equals(final Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof RouteNote)) {
       return super.equals(obj);
@@ -237,10 +247,10 @@ private static final long serialVersionUID = 0L;
     if (hasLocation() != other.hasLocation()) return false;
     if (hasLocation()) {
       if (!getLocation()
-          .equals(other.getLocation())) return false;
+              .equals(other.getLocation())) return false;
     }
     if (!getMessage()
-        .equals(other.getMessage())) return false;
+            .equals(other.getMessage())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -264,95 +274,112 @@ private static final long serialVersionUID = 0L;
   }
 
   public static RouteNote parseFrom(
-      java.nio.ByteBuffer data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static RouteNote parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static RouteNote parseFrom(
-      com.google.protobuf.ByteString data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static RouteNote parseFrom(
-      com.google.protobuf.ByteString data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static RouteNote parseFrom(byte[] data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static RouteNote parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static RouteNote parseFrom(java.io.InputStream input)
-      throws java.io.IOException {
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+            .parseWithIOException(PARSER, input);
   }
+
   public static RouteNote parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+            .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static RouteNote parseDelimitedFrom(java.io.InputStream input)
-      throws java.io.IOException {
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+            .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static RouteNote parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static RouteNote parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+            .parseWithIOException(PARSER, input);
   }
+
   public static RouteNote parseFrom(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+            .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(RouteNote prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+            ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @Override
   protected Builder newBuilderForType(
-      BuilderParent parent) {
+          BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /**
    * <pre>
    * A RouteNote is a message sent while at a given point.
@@ -361,20 +388,20 @@ private static final long serialVersionUID = 0L;
    * Protobuf type {@code routeguide.RouteNote}
    */
   public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:routeguide.RouteNote)
-      io.grpc.examples.routeguide.RouteNoteOrBuilder {
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:routeguide.RouteNote)
+          io.grpc.examples.routeguide.RouteNoteOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    getDescriptor() {
       return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_RouteNote_descriptor;
     }
 
     @Override
     protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    internalGetFieldAccessorTable() {
       return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_RouteNote_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              RouteNote.class, Builder.class);
+              .ensureFieldAccessorsInitialized(
+                      RouteNote.class, Builder.class);
     }
 
     // Construct using io.grpc.examples.routeguide.RouteNote.newBuilder()
@@ -383,15 +410,17 @@ private static final long serialVersionUID = 0L;
     }
 
     private Builder(
-        BuilderParent parent) {
+            BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
       }
     }
+
     @Override
     public Builder clear() {
       super.clear();
@@ -408,7 +437,7 @@ private static final long serialVersionUID = 0L;
 
     @Override
     public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    getDescriptorForType() {
       return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_RouteNote_descriptor;
     }
 
@@ -443,38 +472,44 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
       return super.setField(field, value);
     }
+
     @Override
     public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @Override
     public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof RouteNote) {
-        return mergeFrom((RouteNote)other);
+        return mergeFrom((RouteNote) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -502,9 +537,9 @@ private static final long serialVersionUID = 0L;
 
     @Override
     public Builder mergeFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       RouteNote parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -521,7 +556,8 @@ private static final long serialVersionUID = 0L;
 
     private Point location_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder> locationBuilder_;
+            Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder> locationBuilder_;
+
     /**
      * <pre>
      * The location from which the message is sent.
@@ -533,6 +569,7 @@ private static final long serialVersionUID = 0L;
     public boolean hasLocation() {
       return locationBuilder_ != null || location_ != null;
     }
+
     /**
      * <pre>
      * The location from which the message is sent.
@@ -548,6 +585,7 @@ private static final long serialVersionUID = 0L;
         return locationBuilder_.getMessage();
       }
     }
+
     /**
      * <pre>
      * The location from which the message is sent.
@@ -568,6 +606,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * The location from which the message is sent.
@@ -576,7 +615,7 @@ private static final long serialVersionUID = 0L;
      * <code>.routeguide.Point location = 1;</code>
      */
     public Builder setLocation(
-        Point.Builder builderForValue) {
+            Point.Builder builderForValue) {
       if (locationBuilder_ == null) {
         location_ = builderForValue.build();
         onChanged();
@@ -586,6 +625,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * The location from which the message is sent.
@@ -597,7 +637,7 @@ private static final long serialVersionUID = 0L;
       if (locationBuilder_ == null) {
         if (location_ != null) {
           location_ =
-            Point.newBuilder(location_).mergeFrom(value).buildPartial();
+                  Point.newBuilder(location_).mergeFrom(value).buildPartial();
         } else {
           location_ = value;
         }
@@ -608,6 +648,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * The location from which the message is sent.
@@ -626,6 +667,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * The location from which the message is sent.
@@ -634,10 +676,11 @@ private static final long serialVersionUID = 0L;
      * <code>.routeguide.Point location = 1;</code>
      */
     public Point.Builder getLocationBuilder() {
-      
+
       onChanged();
       return getLocationFieldBuilder().getBuilder();
     }
+
     /**
      * <pre>
      * The location from which the message is sent.
@@ -650,9 +693,10 @@ private static final long serialVersionUID = 0L;
         return locationBuilder_.getMessageOrBuilder();
       } else {
         return location_ == null ?
-            Point.getDefaultInstance() : location_;
+                Point.getDefaultInstance() : location_;
       }
     }
+
     /**
      * <pre>
      * The location from which the message is sent.
@@ -661,11 +705,11 @@ private static final long serialVersionUID = 0L;
      * <code>.routeguide.Point location = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>
-        getLocationFieldBuilder() {
+            Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>
+    getLocationFieldBuilder() {
       if (locationBuilder_ == null) {
         locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>(
+                Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>(
                 getLocation(),
                 getParentForChildren(),
                 isClean());
@@ -675,6 +719,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private Object message_ = "";
+
     /**
      * <pre>
      * The message to be sent.
@@ -687,7 +732,7 @@ private static final long serialVersionUID = 0L;
       Object ref = message_;
       if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+                (com.google.protobuf.ByteString) ref;
         String s = bs.toStringUtf8();
         message_ = s;
         return s;
@@ -695,6 +740,7 @@ private static final long serialVersionUID = 0L;
         return (String) ref;
       }
     }
+
     /**
      * <pre>
      * The message to be sent.
@@ -704,18 +750,19 @@ private static final long serialVersionUID = 0L;
      * @return The bytes for message.
      */
     public com.google.protobuf.ByteString
-        getMessageBytes() {
+    getMessageBytes() {
       Object ref = message_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (String) ref);
         message_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
+
     /**
      * <pre>
      * The message to be sent.
@@ -726,15 +773,16 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMessage(
-        String value) {
+            String value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        throw new NullPointerException();
+      }
+
       message_ = value;
       onChanged();
       return this;
     }
+
     /**
      * <pre>
      * The message to be sent.
@@ -744,11 +792,12 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMessage() {
-      
+
       message_ = getDefaultInstance().getMessage();
       onChanged();
       return this;
     }
+
     /**
      * <pre>
      * The message to be sent.
@@ -759,25 +808,26 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMessageBytes(
-        com.google.protobuf.ByteString value) {
+            com.google.protobuf.ByteString value) {
       if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
       message_ = value;
       onChanged();
       return this;
     }
+
     @Override
     public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
     @Override
     public final Builder mergeUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
@@ -787,6 +837,7 @@ private static final long serialVersionUID = 0L;
 
   // @@protoc_insertion_point(class_scope:routeguide.RouteNote)
   private static final RouteNote DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new RouteNote();
   }
@@ -796,12 +847,12 @@ private static final long serialVersionUID = 0L;
   }
 
   private static final com.google.protobuf.Parser<RouteNote>
-      PARSER = new com.google.protobuf.AbstractParser<RouteNote>() {
+          PARSER = new com.google.protobuf.AbstractParser<RouteNote>() {
     @Override
     public RouteNote parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return new RouteNote(input, extensionRegistry);
     }
   };

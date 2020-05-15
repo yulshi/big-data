@@ -11,7 +11,7 @@ object WordCount {
 
   def main(args: Array[String]): Unit = {
 
-    var config = new SparkConf().setAppName("WordCount").setMaster("local[*]")
+    val config = new SparkConf().setAppName("WordCount").setMaster("local[*]")
     val sc = new SparkContext(config)
 
     val line = sc.textFile("/opt/modules/input")

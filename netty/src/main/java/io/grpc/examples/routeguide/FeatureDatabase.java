@@ -10,15 +10,17 @@ package io.grpc.examples.routeguide;
  *
  * Protobuf type {@code routeguide.FeatureDatabase}
  */
-public  final class FeatureDatabase extends
-    com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:routeguide.FeatureDatabase)
-    FeatureDatabaseOrBuilder {
-private static final long serialVersionUID = 0L;
+public final class FeatureDatabase extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:routeguide.FeatureDatabase)
+        FeatureDatabaseOrBuilder {
+  private static final long serialVersionUID = 0L;
+
   // Use FeatureDatabase.newBuilder() to construct.
   private FeatureDatabase(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private FeatureDatabase() {
     feature_ = java.util.Collections.emptyList();
   }
@@ -26,7 +28,7 @@ private static final long serialVersionUID = 0L;
   @Override
   @SuppressWarnings({"unused"})
   protected Object newInstance(
-      UnusedPrivateParameter unused) {
+          UnusedPrivateParameter unused) {
     return new FeatureDatabase();
   }
 
@@ -35,17 +37,18 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
+
   private FeatureDatabase(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
       throw new NullPointerException();
     }
     int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
+            com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
       boolean done = false;
       while (!done) {
@@ -60,12 +63,12 @@ private static final long serialVersionUID = 0L;
               mutable_bitField0_ |= 0x00000001;
             }
             feature_.add(
-                input.readMessage(Feature.parser(), extensionRegistry));
+                    input.readMessage(Feature.parser(), extensionRegistry));
             break;
           }
           default: {
             if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
+                    input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
             break;
@@ -76,7 +79,7 @@ private static final long serialVersionUID = 0L;
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+              e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         feature_ = java.util.Collections.unmodifiableList(feature_);
@@ -85,55 +88,62 @@ private static final long serialVersionUID = 0L;
       makeExtensionsImmutable();
     }
   }
+
   public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+  getDescriptor() {
     return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_FeatureDatabase_descriptor;
   }
 
   @Override
   protected FieldAccessorTable
-      internalGetFieldAccessorTable() {
+  internalGetFieldAccessorTable() {
     return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_FeatureDatabase_fieldAccessorTable
-        .ensureFieldAccessorsInitialized(
-            FeatureDatabase.class, Builder.class);
+            .ensureFieldAccessorsInitialized(
+                    FeatureDatabase.class, Builder.class);
   }
 
   public static final int FEATURE_FIELD_NUMBER = 1;
   private java.util.List<Feature> feature_;
+
   /**
    * <code>repeated .routeguide.Feature feature = 1;</code>
    */
   public java.util.List<Feature> getFeatureList() {
     return feature_;
   }
+
   /**
    * <code>repeated .routeguide.Feature feature = 1;</code>
    */
-  public java.util.List<? extends io.grpc.examples.routeguide.FeatureOrBuilder> 
-      getFeatureOrBuilderList() {
+  public java.util.List<? extends io.grpc.examples.routeguide.FeatureOrBuilder>
+  getFeatureOrBuilderList() {
     return feature_;
   }
+
   /**
    * <code>repeated .routeguide.Feature feature = 1;</code>
    */
   public int getFeatureCount() {
     return feature_.size();
   }
+
   /**
    * <code>repeated .routeguide.Feature feature = 1;</code>
    */
   public Feature getFeature(int index) {
     return feature_.get(index);
   }
+
   /**
    * <code>repeated .routeguide.Feature feature = 1;</code>
    */
   public io.grpc.examples.routeguide.FeatureOrBuilder getFeatureOrBuilder(
-      int index) {
+          int index) {
     return feature_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
+
   @Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -146,7 +156,7 @@ private static final long serialVersionUID = 0L;
 
   @Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+          throws java.io.IOException {
     for (int i = 0; i < feature_.size(); i++) {
       output.writeMessage(1, feature_.get(i));
     }
@@ -161,7 +171,7 @@ private static final long serialVersionUID = 0L;
     size = 0;
     for (int i = 0; i < feature_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, feature_.get(i));
+              .computeMessageSize(1, feature_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -171,7 +181,7 @@ private static final long serialVersionUID = 0L;
   @Override
   public boolean equals(final Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof FeatureDatabase)) {
       return super.equals(obj);
@@ -179,7 +189,7 @@ private static final long serialVersionUID = 0L;
     FeatureDatabase other = (FeatureDatabase) obj;
 
     if (!getFeatureList()
-        .equals(other.getFeatureList())) return false;
+            .equals(other.getFeatureList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -201,95 +211,112 @@ private static final long serialVersionUID = 0L;
   }
 
   public static FeatureDatabase parseFrom(
-      java.nio.ByteBuffer data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static FeatureDatabase parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static FeatureDatabase parseFrom(
-      com.google.protobuf.ByteString data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static FeatureDatabase parseFrom(
-      com.google.protobuf.ByteString data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static FeatureDatabase parseFrom(byte[] data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static FeatureDatabase parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static FeatureDatabase parseFrom(java.io.InputStream input)
-      throws java.io.IOException {
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+            .parseWithIOException(PARSER, input);
   }
+
   public static FeatureDatabase parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+            .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static FeatureDatabase parseDelimitedFrom(java.io.InputStream input)
-      throws java.io.IOException {
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+            .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static FeatureDatabase parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static FeatureDatabase parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+            .parseWithIOException(PARSER, input);
   }
+
   public static FeatureDatabase parseFrom(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+            .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(FeatureDatabase prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+            ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @Override
   protected Builder newBuilderForType(
-      BuilderParent parent) {
+          BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /**
    * <pre>
    * Not used in the RPC.  Instead, this is here for the form serialized to disk.
@@ -298,20 +325,20 @@ private static final long serialVersionUID = 0L;
    * Protobuf type {@code routeguide.FeatureDatabase}
    */
   public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:routeguide.FeatureDatabase)
-      io.grpc.examples.routeguide.FeatureDatabaseOrBuilder {
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:routeguide.FeatureDatabase)
+          io.grpc.examples.routeguide.FeatureDatabaseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    getDescriptor() {
       return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_FeatureDatabase_descriptor;
     }
 
     @Override
     protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    internalGetFieldAccessorTable() {
       return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_FeatureDatabase_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              FeatureDatabase.class, Builder.class);
+              .ensureFieldAccessorsInitialized(
+                      FeatureDatabase.class, Builder.class);
     }
 
     // Construct using io.grpc.examples.routeguide.FeatureDatabase.newBuilder()
@@ -320,16 +347,18 @@ private static final long serialVersionUID = 0L;
     }
 
     private Builder(
-        BuilderParent parent) {
+            BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getFeatureFieldBuilder();
       }
     }
+
     @Override
     public Builder clear() {
       super.clear();
@@ -344,7 +373,7 @@ private static final long serialVersionUID = 0L;
 
     @Override
     public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    getDescriptorForType() {
       return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_FeatureDatabase_descriptor;
     }
 
@@ -383,38 +412,44 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
       return super.setField(field, value);
     }
+
     @Override
     public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @Override
     public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof FeatureDatabase) {
-        return mergeFrom((FeatureDatabase)other);
+        return mergeFrom((FeatureDatabase) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -441,9 +476,9 @@ private static final long serialVersionUID = 0L;
             featureBuilder_ = null;
             feature_ = other.feature_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            featureBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getFeatureFieldBuilder() : null;
+            featureBuilder_ =
+                    com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                            getFeatureFieldBuilder() : null;
           } else {
             featureBuilder_.addAllMessages(other.feature_);
           }
@@ -461,9 +496,9 @@ private static final long serialVersionUID = 0L;
 
     @Override
     public Builder mergeFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       FeatureDatabase parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -477,19 +512,21 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     private int bitField0_;
 
     private java.util.List<Feature> feature_ =
-      java.util.Collections.emptyList();
+            java.util.Collections.emptyList();
+
     private void ensureFeatureIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
         feature_ = new java.util.ArrayList<Feature>(feature_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        Feature, Feature.Builder, io.grpc.examples.routeguide.FeatureOrBuilder> featureBuilder_;
+            Feature, Feature.Builder, io.grpc.examples.routeguide.FeatureOrBuilder> featureBuilder_;
 
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
@@ -501,6 +538,7 @@ private static final long serialVersionUID = 0L;
         return featureBuilder_.getMessageList();
       }
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
@@ -511,6 +549,7 @@ private static final long serialVersionUID = 0L;
         return featureBuilder_.getCount();
       }
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
@@ -521,11 +560,12 @@ private static final long serialVersionUID = 0L;
         return featureBuilder_.getMessage(index);
       }
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
     public Builder setFeature(
-        int index, Feature value) {
+            int index, Feature value) {
       if (featureBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -538,11 +578,12 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
     public Builder setFeature(
-        int index, Feature.Builder builderForValue) {
+            int index, Feature.Builder builderForValue) {
       if (featureBuilder_ == null) {
         ensureFeatureIsMutable();
         feature_.set(index, builderForValue.build());
@@ -552,6 +593,7 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
@@ -568,11 +610,12 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
     public Builder addFeature(
-        int index, Feature value) {
+            int index, Feature value) {
       if (featureBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -585,11 +628,12 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
     public Builder addFeature(
-        Feature.Builder builderForValue) {
+            Feature.Builder builderForValue) {
       if (featureBuilder_ == null) {
         ensureFeatureIsMutable();
         feature_.add(builderForValue.build());
@@ -599,11 +643,12 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
     public Builder addFeature(
-        int index, Feature.Builder builderForValue) {
+            int index, Feature.Builder builderForValue) {
       if (featureBuilder_ == null) {
         ensureFeatureIsMutable();
         feature_.add(index, builderForValue.build());
@@ -613,21 +658,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
     public Builder addAllFeature(
-        Iterable<? extends Feature> values) {
+            Iterable<? extends Feature> values) {
       if (featureBuilder_ == null) {
         ensureFeatureIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, feature_);
+                values, feature_);
         onChanged();
       } else {
         featureBuilder_.addAllMessages(values);
       }
       return this;
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
@@ -641,6 +688,7 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
@@ -654,62 +702,70 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
     public Feature.Builder getFeatureBuilder(
-        int index) {
+            int index) {
       return getFeatureFieldBuilder().getBuilder(index);
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
     public io.grpc.examples.routeguide.FeatureOrBuilder getFeatureOrBuilder(
-        int index) {
+            int index) {
       if (featureBuilder_ == null) {
-        return feature_.get(index);  } else {
+        return feature_.get(index);
+      } else {
         return featureBuilder_.getMessageOrBuilder(index);
       }
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
-    public java.util.List<? extends io.grpc.examples.routeguide.FeatureOrBuilder> 
-         getFeatureOrBuilderList() {
+    public java.util.List<? extends io.grpc.examples.routeguide.FeatureOrBuilder>
+    getFeatureOrBuilderList() {
       if (featureBuilder_ != null) {
         return featureBuilder_.getMessageOrBuilderList();
       } else {
         return java.util.Collections.unmodifiableList(feature_);
       }
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
     public Feature.Builder addFeatureBuilder() {
       return getFeatureFieldBuilder().addBuilder(
-          Feature.getDefaultInstance());
+              Feature.getDefaultInstance());
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
     public Feature.Builder addFeatureBuilder(
-        int index) {
+            int index) {
       return getFeatureFieldBuilder().addBuilder(
-          index, Feature.getDefaultInstance());
+              index, Feature.getDefaultInstance());
     }
+
     /**
      * <code>repeated .routeguide.Feature feature = 1;</code>
      */
     public java.util.List<Feature.Builder>
-         getFeatureBuilderList() {
+    getFeatureBuilderList() {
       return getFeatureFieldBuilder().getBuilderList();
     }
+
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        Feature, Feature.Builder, io.grpc.examples.routeguide.FeatureOrBuilder>
-        getFeatureFieldBuilder() {
+            Feature, Feature.Builder, io.grpc.examples.routeguide.FeatureOrBuilder>
+    getFeatureFieldBuilder() {
       if (featureBuilder_ == null) {
         featureBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            Feature, Feature.Builder, io.grpc.examples.routeguide.FeatureOrBuilder>(
+                Feature, Feature.Builder, io.grpc.examples.routeguide.FeatureOrBuilder>(
                 feature_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -718,15 +774,16 @@ private static final long serialVersionUID = 0L;
       }
       return featureBuilder_;
     }
+
     @Override
     public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
     @Override
     public final Builder mergeUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
@@ -736,6 +793,7 @@ private static final long serialVersionUID = 0L;
 
   // @@protoc_insertion_point(class_scope:routeguide.FeatureDatabase)
   private static final FeatureDatabase DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new FeatureDatabase();
   }
@@ -745,12 +803,12 @@ private static final long serialVersionUID = 0L;
   }
 
   private static final com.google.protobuf.Parser<FeatureDatabase>
-      PARSER = new com.google.protobuf.AbstractParser<FeatureDatabase>() {
+          PARSER = new com.google.protobuf.AbstractParser<FeatureDatabase>() {
     @Override
     public FeatureDatabase parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return new FeatureDatabase(input, extensionRegistry);
     }
   };

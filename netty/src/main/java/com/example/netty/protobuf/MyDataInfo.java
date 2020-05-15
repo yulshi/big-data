@@ -27,7 +27,7 @@ public final class MyDataInfo {
      * <code>.MyMessage.DataType data_type = 1;</code>
      * @return The dataType.
      */
-    MyMessage.DataType getDataType();
+    com.example.netty.protobuf.MyDataInfo.MyMessage.DataType getDataType();
 
     /**
      * <code>.Student student = 2;</code>
@@ -38,11 +38,11 @@ public final class MyDataInfo {
      * <code>.Student student = 2;</code>
      * @return The student.
      */
-    Student getStudent();
+    com.example.netty.protobuf.MyDataInfo.Student getStudent();
     /**
      * <code>.Student student = 2;</code>
      */
-    StudentOrBuilder getStudentOrBuilder();
+    com.example.netty.protobuf.MyDataInfo.StudentOrBuilder getStudentOrBuilder();
 
     /**
      * <code>.Worker worker = 3;</code>
@@ -53,13 +53,13 @@ public final class MyDataInfo {
      * <code>.Worker worker = 3;</code>
      * @return The worker.
      */
-    Worker getWorker();
+    com.example.netty.protobuf.MyDataInfo.Worker getWorker();
     /**
      * <code>.Worker worker = 3;</code>
      */
-    WorkerOrBuilder getWorkerOrBuilder();
+    com.example.netty.protobuf.MyDataInfo.WorkerOrBuilder getWorkerOrBuilder();
 
-    public MyMessage.DataBodyCase getDataBodyCase();
+    public com.example.netty.protobuf.MyDataInfo.MyMessage.DataBodyCase getDataBodyCase();
   }
   /**
    * <pre>
@@ -81,14 +81,14 @@ public final class MyDataInfo {
       dataType_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new MyMessage();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -99,7 +99,7 @@ public final class MyDataInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -118,28 +118,28 @@ public final class MyDataInfo {
               break;
             }
             case 18: {
-              Student.Builder subBuilder = null;
+              com.example.netty.protobuf.MyDataInfo.Student.Builder subBuilder = null;
               if (dataBodyCase_ == 2) {
-                subBuilder = ((Student) dataBody_).toBuilder();
+                subBuilder = ((com.example.netty.protobuf.MyDataInfo.Student) dataBody_).toBuilder();
               }
               dataBody_ =
-                  input.readMessage(Student.parser(), extensionRegistry);
+                  input.readMessage(com.example.netty.protobuf.MyDataInfo.Student.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((Student) dataBody_);
+                subBuilder.mergeFrom((com.example.netty.protobuf.MyDataInfo.Student) dataBody_);
                 dataBody_ = subBuilder.buildPartial();
               }
               dataBodyCase_ = 2;
               break;
             }
             case 26: {
-              Worker.Builder subBuilder = null;
+              com.example.netty.protobuf.MyDataInfo.Worker.Builder subBuilder = null;
               if (dataBodyCase_ == 3) {
-                subBuilder = ((Worker) dataBody_).toBuilder();
+                subBuilder = ((com.example.netty.protobuf.MyDataInfo.Worker) dataBody_).toBuilder();
               }
               dataBody_ =
-                  input.readMessage(Worker.parser(), extensionRegistry);
+                  input.readMessage(com.example.netty.protobuf.MyDataInfo.Worker.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((Worker) dataBody_);
+                subBuilder.mergeFrom((com.example.netty.protobuf.MyDataInfo.Worker) dataBody_);
                 dataBody_ = subBuilder.buildPartial();
               }
               dataBodyCase_ = 3;
@@ -166,15 +166,15 @@ public final class MyDataInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MyDataInfo.internal_static_MyMessage_descriptor;
+      return com.example.netty.protobuf.MyDataInfo.internal_static_MyMessage_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MyDataInfo.internal_static_MyMessage_fieldAccessorTable
+      return com.example.netty.protobuf.MyDataInfo.internal_static_MyMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MyMessage.class, Builder.class);
+              com.example.netty.protobuf.MyDataInfo.MyMessage.class, com.example.netty.protobuf.MyDataInfo.MyMessage.Builder.class);
     }
 
     /**
@@ -205,7 +205,7 @@ public final class MyDataInfo {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new IllegalArgumentException(
+          throw new java.lang.IllegalArgumentException(
               "Can't get the number of an unknown enum value.");
         }
         return value;
@@ -216,7 +216,7 @@ public final class MyDataInfo {
        * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @Deprecated
+      @java.lang.Deprecated
       public static DataType valueOf(int value) {
         return forNumber(value);
       }
@@ -255,7 +255,7 @@ public final class MyDataInfo {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return MyMessage.getDescriptor().getEnumTypes().get(0);
+        return com.example.netty.protobuf.MyDataInfo.MyMessage.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final DataType[] VALUES = values();
@@ -263,7 +263,7 @@ public final class MyDataInfo {
       public static DataType valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
+          throw new java.lang.IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
@@ -282,10 +282,10 @@ public final class MyDataInfo {
     }
 
     private int dataBodyCase_ = 0;
-    private Object dataBody_;
+    private java.lang.Object dataBody_;
     public enum DataBodyCase
         implements com.google.protobuf.Internal.EnumLite,
-            InternalOneOfEnum {
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       STUDENT(2),
       WORKER(3),
       DATABODY_NOT_SET(0);
@@ -298,7 +298,7 @@ public final class MyDataInfo {
        * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @Deprecated
+      @java.lang.Deprecated
       public static DataBodyCase valueOf(int value) {
         return forNumber(value);
       }
@@ -335,10 +335,10 @@ public final class MyDataInfo {
      * <code>.MyMessage.DataType data_type = 1;</code>
      * @return The dataType.
      */
-    public DataType getDataType() {
+    public com.example.netty.protobuf.MyDataInfo.MyMessage.DataType getDataType() {
       @SuppressWarnings("deprecation")
-      DataType result = DataType.valueOf(dataType_);
-      return result == null ? DataType.UNRECOGNIZED : result;
+      com.example.netty.protobuf.MyDataInfo.MyMessage.DataType result = com.example.netty.protobuf.MyDataInfo.MyMessage.DataType.valueOf(dataType_);
+      return result == null ? com.example.netty.protobuf.MyDataInfo.MyMessage.DataType.UNRECOGNIZED : result;
     }
 
     public static final int STUDENT_FIELD_NUMBER = 2;
@@ -353,20 +353,20 @@ public final class MyDataInfo {
      * <code>.Student student = 2;</code>
      * @return The student.
      */
-    public Student getStudent() {
+    public com.example.netty.protobuf.MyDataInfo.Student getStudent() {
       if (dataBodyCase_ == 2) {
-         return (Student) dataBody_;
+         return (com.example.netty.protobuf.MyDataInfo.Student) dataBody_;
       }
-      return Student.getDefaultInstance();
+      return com.example.netty.protobuf.MyDataInfo.Student.getDefaultInstance();
     }
     /**
      * <code>.Student student = 2;</code>
      */
-    public StudentOrBuilder getStudentOrBuilder() {
+    public com.example.netty.protobuf.MyDataInfo.StudentOrBuilder getStudentOrBuilder() {
       if (dataBodyCase_ == 2) {
-         return (Student) dataBody_;
+         return (com.example.netty.protobuf.MyDataInfo.Student) dataBody_;
       }
-      return Student.getDefaultInstance();
+      return com.example.netty.protobuf.MyDataInfo.Student.getDefaultInstance();
     }
 
     public static final int WORKER_FIELD_NUMBER = 3;
@@ -381,24 +381,24 @@ public final class MyDataInfo {
      * <code>.Worker worker = 3;</code>
      * @return The worker.
      */
-    public Worker getWorker() {
+    public com.example.netty.protobuf.MyDataInfo.Worker getWorker() {
       if (dataBodyCase_ == 3) {
-         return (Worker) dataBody_;
+         return (com.example.netty.protobuf.MyDataInfo.Worker) dataBody_;
       }
-      return Worker.getDefaultInstance();
+      return com.example.netty.protobuf.MyDataInfo.Worker.getDefaultInstance();
     }
     /**
      * <code>.Worker worker = 3;</code>
      */
-    public WorkerOrBuilder getWorkerOrBuilder() {
+    public com.example.netty.protobuf.MyDataInfo.WorkerOrBuilder getWorkerOrBuilder() {
       if (dataBodyCase_ == 3) {
-         return (Worker) dataBody_;
+         return (com.example.netty.protobuf.MyDataInfo.Worker) dataBody_;
       }
-      return Worker.getDefaultInstance();
+      return com.example.netty.protobuf.MyDataInfo.Worker.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -408,53 +408,53 @@ public final class MyDataInfo {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (dataType_ != DataType.StudentType.getNumber()) {
+      if (dataType_ != com.example.netty.protobuf.MyDataInfo.MyMessage.DataType.StudentType.getNumber()) {
         output.writeEnum(1, dataType_);
       }
       if (dataBodyCase_ == 2) {
-        output.writeMessage(2, (Student) dataBody_);
+        output.writeMessage(2, (com.example.netty.protobuf.MyDataInfo.Student) dataBody_);
       }
       if (dataBodyCase_ == 3) {
-        output.writeMessage(3, (Worker) dataBody_);
+        output.writeMessage(3, (com.example.netty.protobuf.MyDataInfo.Worker) dataBody_);
       }
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
 
       size = 0;
-      if (dataType_ != DataType.StudentType.getNumber()) {
+      if (dataType_ != com.example.netty.protobuf.MyDataInfo.MyMessage.DataType.StudentType.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, dataType_);
       }
       if (dataBodyCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (Student) dataBody_);
+          .computeMessageSize(2, (com.example.netty.protobuf.MyDataInfo.Student) dataBody_);
       }
       if (dataBodyCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (Worker) dataBody_);
+          .computeMessageSize(3, (com.example.netty.protobuf.MyDataInfo.Worker) dataBody_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof MyMessage)) {
+      if (!(obj instanceof com.example.netty.protobuf.MyDataInfo.MyMessage)) {
         return super.equals(obj);
       }
-      MyMessage other = (MyMessage) obj;
+      com.example.netty.protobuf.MyDataInfo.MyMessage other = (com.example.netty.protobuf.MyDataInfo.MyMessage) obj;
 
       if (dataType_ != other.dataType_) return false;
       if (!getDataBodyCase().equals(other.getDataBodyCase())) return false;
@@ -474,7 +474,7 @@ public final class MyDataInfo {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -500,69 +500,69 @@ public final class MyDataInfo {
       return hash;
     }
 
-    public static MyMessage parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MyMessage parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MyMessage parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MyMessage parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MyMessage parseFrom(byte[] data)
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MyMessage parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MyMessage parseFrom(java.io.InputStream input)
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static MyMessage parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static MyMessage parseDelimitedFrom(java.io.InputStream input)
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static MyMessage parseDelimitedFrom(
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static MyMessage parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static MyMessage parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -570,23 +570,23 @@ public final class MyDataInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(MyMessage prototype) {
+    public static Builder newBuilder(com.example.netty.protobuf.MyDataInfo.MyMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -600,18 +600,18 @@ public final class MyDataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:MyMessage)
-        MyMessageOrBuilder {
+        com.example.netty.protobuf.MyDataInfo.MyMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MyDataInfo.internal_static_MyMessage_descriptor;
+        return com.example.netty.protobuf.MyDataInfo.internal_static_MyMessage_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MyDataInfo.internal_static_MyMessage_fieldAccessorTable
+        return com.example.netty.protobuf.MyDataInfo.internal_static_MyMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                MyMessage.class, Builder.class);
+                com.example.netty.protobuf.MyDataInfo.MyMessage.class, com.example.netty.protobuf.MyDataInfo.MyMessage.Builder.class);
       }
 
       // Construct using com.example.netty.protobuf.MyDataInfo.MyMessage.newBuilder()
@@ -620,7 +620,7 @@ public final class MyDataInfo {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -629,7 +629,7 @@ public final class MyDataInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         dataType_ = 0;
@@ -639,29 +639,29 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MyDataInfo.internal_static_MyMessage_descriptor;
+        return com.example.netty.protobuf.MyDataInfo.internal_static_MyMessage_descriptor;
       }
 
-      @Override
-      public MyMessage getDefaultInstanceForType() {
-        return MyMessage.getDefaultInstance();
+      @java.lang.Override
+      public com.example.netty.protobuf.MyDataInfo.MyMessage getDefaultInstanceForType() {
+        return com.example.netty.protobuf.MyDataInfo.MyMessage.getDefaultInstance();
       }
 
-      @Override
-      public MyMessage build() {
-        MyMessage result = buildPartial();
+      @java.lang.Override
+      public com.example.netty.protobuf.MyDataInfo.MyMessage build() {
+        com.example.netty.protobuf.MyDataInfo.MyMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public MyMessage buildPartial() {
-        MyMessage result = new MyMessage(this);
+      @java.lang.Override
+      public com.example.netty.protobuf.MyDataInfo.MyMessage buildPartial() {
+        com.example.netty.protobuf.MyDataInfo.MyMessage result = new com.example.netty.protobuf.MyDataInfo.MyMessage(this);
         result.dataType_ = dataType_;
         if (dataBodyCase_ == 2) {
           if (studentBuilder_ == null) {
@@ -682,50 +682,50 @@ public final class MyDataInfo {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MyMessage) {
-          return mergeFrom((MyMessage)other);
+        if (other instanceof com.example.netty.protobuf.MyDataInfo.MyMessage) {
+          return mergeFrom((com.example.netty.protobuf.MyDataInfo.MyMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(MyMessage other) {
-        if (other == MyMessage.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.example.netty.protobuf.MyDataInfo.MyMessage other) {
+        if (other == com.example.netty.protobuf.MyDataInfo.MyMessage.getDefaultInstance()) return this;
         if (other.dataType_ != 0) {
           setDataTypeValue(other.getDataTypeValue());
         }
@@ -747,21 +747,21 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MyMessage parsedMessage = null;
+        com.example.netty.protobuf.MyDataInfo.MyMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MyMessage) e.getUnfinishedMessage();
+          parsedMessage = (com.example.netty.protobuf.MyDataInfo.MyMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -771,7 +771,7 @@ public final class MyDataInfo {
         return this;
       }
       private int dataBodyCase_ = 0;
-      private Object dataBody_;
+      private java.lang.Object dataBody_;
       public DataBodyCase
           getDataBodyCase() {
         return DataBodyCase.forNumber(
@@ -808,17 +808,17 @@ public final class MyDataInfo {
        * <code>.MyMessage.DataType data_type = 1;</code>
        * @return The dataType.
        */
-      public DataType getDataType() {
+      public com.example.netty.protobuf.MyDataInfo.MyMessage.DataType getDataType() {
         @SuppressWarnings("deprecation")
-        DataType result = DataType.valueOf(dataType_);
-        return result == null ? DataType.UNRECOGNIZED : result;
+        com.example.netty.protobuf.MyDataInfo.MyMessage.DataType result = com.example.netty.protobuf.MyDataInfo.MyMessage.DataType.valueOf(dataType_);
+        return result == null ? com.example.netty.protobuf.MyDataInfo.MyMessage.DataType.UNRECOGNIZED : result;
       }
       /**
        * <code>.MyMessage.DataType data_type = 1;</code>
        * @param value The dataType to set.
        * @return This builder for chaining.
        */
-      public Builder setDataType(DataType value) {
+      public Builder setDataType(com.example.netty.protobuf.MyDataInfo.MyMessage.DataType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -839,7 +839,7 @@ public final class MyDataInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          Student, Student.Builder, StudentOrBuilder> studentBuilder_;
+          com.example.netty.protobuf.MyDataInfo.Student, com.example.netty.protobuf.MyDataInfo.Student.Builder, com.example.netty.protobuf.MyDataInfo.StudentOrBuilder> studentBuilder_;
       /**
        * <code>.Student student = 2;</code>
        * @return Whether the student field is set.
@@ -851,23 +851,23 @@ public final class MyDataInfo {
        * <code>.Student student = 2;</code>
        * @return The student.
        */
-      public Student getStudent() {
+      public com.example.netty.protobuf.MyDataInfo.Student getStudent() {
         if (studentBuilder_ == null) {
           if (dataBodyCase_ == 2) {
-            return (Student) dataBody_;
+            return (com.example.netty.protobuf.MyDataInfo.Student) dataBody_;
           }
-          return Student.getDefaultInstance();
+          return com.example.netty.protobuf.MyDataInfo.Student.getDefaultInstance();
         } else {
           if (dataBodyCase_ == 2) {
             return studentBuilder_.getMessage();
           }
-          return Student.getDefaultInstance();
+          return com.example.netty.protobuf.MyDataInfo.Student.getDefaultInstance();
         }
       }
       /**
        * <code>.Student student = 2;</code>
        */
-      public Builder setStudent(Student value) {
+      public Builder setStudent(com.example.netty.protobuf.MyDataInfo.Student value) {
         if (studentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -884,7 +884,7 @@ public final class MyDataInfo {
        * <code>.Student student = 2;</code>
        */
       public Builder setStudent(
-          Student.Builder builderForValue) {
+          com.example.netty.protobuf.MyDataInfo.Student.Builder builderForValue) {
         if (studentBuilder_ == null) {
           dataBody_ = builderForValue.build();
           onChanged();
@@ -897,11 +897,11 @@ public final class MyDataInfo {
       /**
        * <code>.Student student = 2;</code>
        */
-      public Builder mergeStudent(Student value) {
+      public Builder mergeStudent(com.example.netty.protobuf.MyDataInfo.Student value) {
         if (studentBuilder_ == null) {
           if (dataBodyCase_ == 2 &&
-              dataBody_ != Student.getDefaultInstance()) {
-            dataBody_ = Student.newBuilder((Student) dataBody_)
+              dataBody_ != com.example.netty.protobuf.MyDataInfo.Student.getDefaultInstance()) {
+            dataBody_ = com.example.netty.protobuf.MyDataInfo.Student.newBuilder((com.example.netty.protobuf.MyDataInfo.Student) dataBody_)
                 .mergeFrom(value).buildPartial();
           } else {
             dataBody_ = value;
@@ -938,35 +938,35 @@ public final class MyDataInfo {
       /**
        * <code>.Student student = 2;</code>
        */
-      public Student.Builder getStudentBuilder() {
+      public com.example.netty.protobuf.MyDataInfo.Student.Builder getStudentBuilder() {
         return getStudentFieldBuilder().getBuilder();
       }
       /**
        * <code>.Student student = 2;</code>
        */
-      public StudentOrBuilder getStudentOrBuilder() {
+      public com.example.netty.protobuf.MyDataInfo.StudentOrBuilder getStudentOrBuilder() {
         if ((dataBodyCase_ == 2) && (studentBuilder_ != null)) {
           return studentBuilder_.getMessageOrBuilder();
         } else {
           if (dataBodyCase_ == 2) {
-            return (Student) dataBody_;
+            return (com.example.netty.protobuf.MyDataInfo.Student) dataBody_;
           }
-          return Student.getDefaultInstance();
+          return com.example.netty.protobuf.MyDataInfo.Student.getDefaultInstance();
         }
       }
       /**
        * <code>.Student student = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Student, Student.Builder, StudentOrBuilder>
+          com.example.netty.protobuf.MyDataInfo.Student, com.example.netty.protobuf.MyDataInfo.Student.Builder, com.example.netty.protobuf.MyDataInfo.StudentOrBuilder> 
           getStudentFieldBuilder() {
         if (studentBuilder_ == null) {
           if (!(dataBodyCase_ == 2)) {
-            dataBody_ = Student.getDefaultInstance();
+            dataBody_ = com.example.netty.protobuf.MyDataInfo.Student.getDefaultInstance();
           }
           studentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Student, Student.Builder, StudentOrBuilder>(
-                  (Student) dataBody_,
+              com.example.netty.protobuf.MyDataInfo.Student, com.example.netty.protobuf.MyDataInfo.Student.Builder, com.example.netty.protobuf.MyDataInfo.StudentOrBuilder>(
+                  (com.example.netty.protobuf.MyDataInfo.Student) dataBody_,
                   getParentForChildren(),
                   isClean());
           dataBody_ = null;
@@ -977,7 +977,7 @@ public final class MyDataInfo {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          Worker, Worker.Builder, WorkerOrBuilder> workerBuilder_;
+          com.example.netty.protobuf.MyDataInfo.Worker, com.example.netty.protobuf.MyDataInfo.Worker.Builder, com.example.netty.protobuf.MyDataInfo.WorkerOrBuilder> workerBuilder_;
       /**
        * <code>.Worker worker = 3;</code>
        * @return Whether the worker field is set.
@@ -989,23 +989,23 @@ public final class MyDataInfo {
        * <code>.Worker worker = 3;</code>
        * @return The worker.
        */
-      public Worker getWorker() {
+      public com.example.netty.protobuf.MyDataInfo.Worker getWorker() {
         if (workerBuilder_ == null) {
           if (dataBodyCase_ == 3) {
-            return (Worker) dataBody_;
+            return (com.example.netty.protobuf.MyDataInfo.Worker) dataBody_;
           }
-          return Worker.getDefaultInstance();
+          return com.example.netty.protobuf.MyDataInfo.Worker.getDefaultInstance();
         } else {
           if (dataBodyCase_ == 3) {
             return workerBuilder_.getMessage();
           }
-          return Worker.getDefaultInstance();
+          return com.example.netty.protobuf.MyDataInfo.Worker.getDefaultInstance();
         }
       }
       /**
        * <code>.Worker worker = 3;</code>
        */
-      public Builder setWorker(Worker value) {
+      public Builder setWorker(com.example.netty.protobuf.MyDataInfo.Worker value) {
         if (workerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1022,7 +1022,7 @@ public final class MyDataInfo {
        * <code>.Worker worker = 3;</code>
        */
       public Builder setWorker(
-          Worker.Builder builderForValue) {
+          com.example.netty.protobuf.MyDataInfo.Worker.Builder builderForValue) {
         if (workerBuilder_ == null) {
           dataBody_ = builderForValue.build();
           onChanged();
@@ -1035,11 +1035,11 @@ public final class MyDataInfo {
       /**
        * <code>.Worker worker = 3;</code>
        */
-      public Builder mergeWorker(Worker value) {
+      public Builder mergeWorker(com.example.netty.protobuf.MyDataInfo.Worker value) {
         if (workerBuilder_ == null) {
           if (dataBodyCase_ == 3 &&
-              dataBody_ != Worker.getDefaultInstance()) {
-            dataBody_ = Worker.newBuilder((Worker) dataBody_)
+              dataBody_ != com.example.netty.protobuf.MyDataInfo.Worker.getDefaultInstance()) {
+            dataBody_ = com.example.netty.protobuf.MyDataInfo.Worker.newBuilder((com.example.netty.protobuf.MyDataInfo.Worker) dataBody_)
                 .mergeFrom(value).buildPartial();
           } else {
             dataBody_ = value;
@@ -1076,35 +1076,35 @@ public final class MyDataInfo {
       /**
        * <code>.Worker worker = 3;</code>
        */
-      public Worker.Builder getWorkerBuilder() {
+      public com.example.netty.protobuf.MyDataInfo.Worker.Builder getWorkerBuilder() {
         return getWorkerFieldBuilder().getBuilder();
       }
       /**
        * <code>.Worker worker = 3;</code>
        */
-      public WorkerOrBuilder getWorkerOrBuilder() {
+      public com.example.netty.protobuf.MyDataInfo.WorkerOrBuilder getWorkerOrBuilder() {
         if ((dataBodyCase_ == 3) && (workerBuilder_ != null)) {
           return workerBuilder_.getMessageOrBuilder();
         } else {
           if (dataBodyCase_ == 3) {
-            return (Worker) dataBody_;
+            return (com.example.netty.protobuf.MyDataInfo.Worker) dataBody_;
           }
-          return Worker.getDefaultInstance();
+          return com.example.netty.protobuf.MyDataInfo.Worker.getDefaultInstance();
         }
       }
       /**
        * <code>.Worker worker = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          Worker, Worker.Builder, WorkerOrBuilder>
+          com.example.netty.protobuf.MyDataInfo.Worker, com.example.netty.protobuf.MyDataInfo.Worker.Builder, com.example.netty.protobuf.MyDataInfo.WorkerOrBuilder> 
           getWorkerFieldBuilder() {
         if (workerBuilder_ == null) {
           if (!(dataBodyCase_ == 3)) {
-            dataBody_ = Worker.getDefaultInstance();
+            dataBody_ = com.example.netty.protobuf.MyDataInfo.Worker.getDefaultInstance();
           }
           workerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              Worker, Worker.Builder, WorkerOrBuilder>(
-                  (Worker) dataBody_,
+              com.example.netty.protobuf.MyDataInfo.Worker, com.example.netty.protobuf.MyDataInfo.Worker.Builder, com.example.netty.protobuf.MyDataInfo.WorkerOrBuilder>(
+                  (com.example.netty.protobuf.MyDataInfo.Worker) dataBody_,
                   getParentForChildren(),
                   isClean());
           dataBody_ = null;
@@ -1113,13 +1113,13 @@ public final class MyDataInfo {
         onChanged();;
         return workerBuilder_;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1130,18 +1130,18 @@ public final class MyDataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:MyMessage)
-    private static final MyMessage DEFAULT_INSTANCE;
+    private static final com.example.netty.protobuf.MyDataInfo.MyMessage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new MyMessage();
+      DEFAULT_INSTANCE = new com.example.netty.protobuf.MyDataInfo.MyMessage();
     }
 
-    public static MyMessage getDefaultInstance() {
+    public static com.example.netty.protobuf.MyDataInfo.MyMessage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<MyMessage>
         PARSER = new com.google.protobuf.AbstractParser<MyMessage>() {
-      @Override
+      @java.lang.Override
       public MyMessage parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1154,13 +1154,13 @@ public final class MyDataInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<MyMessage> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public MyMessage getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.example.netty.protobuf.MyDataInfo.MyMessage getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1180,7 +1180,7 @@ public final class MyDataInfo {
      * <code>string name = 2;</code>
      * @return The name.
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 2;</code>
      * @return The bytes for name.
@@ -1204,14 +1204,14 @@ public final class MyDataInfo {
       name_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new Student();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1222,7 +1222,7 @@ public final class MyDataInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1240,7 +1240,7 @@ public final class MyDataInfo {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
@@ -1266,15 +1266,15 @@ public final class MyDataInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MyDataInfo.internal_static_Student_descriptor;
+      return com.example.netty.protobuf.MyDataInfo.internal_static_Student_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MyDataInfo.internal_static_Student_fieldAccessorTable
+      return com.example.netty.protobuf.MyDataInfo.internal_static_Student_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Student.class, Builder.class);
+              com.example.netty.protobuf.MyDataInfo.Student.class, com.example.netty.protobuf.MyDataInfo.Student.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1288,19 +1288,19 @@ public final class MyDataInfo {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile Object name_;
+    private volatile java.lang.Object name_;
     /**
      * <code>string name = 2;</code>
      * @return The name.
      */
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -1311,11 +1311,11 @@ public final class MyDataInfo {
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -1324,7 +1324,7 @@ public final class MyDataInfo {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1334,7 +1334,7 @@ public final class MyDataInfo {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (id_ != 0) {
@@ -1346,7 +1346,7 @@ public final class MyDataInfo {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1364,15 +1364,15 @@ public final class MyDataInfo {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Student)) {
+      if (!(obj instanceof com.example.netty.protobuf.MyDataInfo.Student)) {
         return super.equals(obj);
       }
-      Student other = (Student) obj;
+      com.example.netty.protobuf.MyDataInfo.Student other = (com.example.netty.protobuf.MyDataInfo.Student) obj;
 
       if (getId()
           != other.getId()) return false;
@@ -1382,7 +1382,7 @@ public final class MyDataInfo {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1398,69 +1398,69 @@ public final class MyDataInfo {
       return hash;
     }
 
-    public static Student parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Student parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Student parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Student parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Student parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Student parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Student parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Student parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Student parseFrom(byte[] data)
+    public static com.example.netty.protobuf.MyDataInfo.Student parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Student parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Student parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Student parseFrom(java.io.InputStream input)
+    public static com.example.netty.protobuf.MyDataInfo.Student parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Student parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Student parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Student parseDelimitedFrom(java.io.InputStream input)
+    public static com.example.netty.protobuf.MyDataInfo.Student parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Student parseDelimitedFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Student parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Student parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Student parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Student parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Student parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1468,23 +1468,23 @@ public final class MyDataInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Student prototype) {
+    public static Builder newBuilder(com.example.netty.protobuf.MyDataInfo.Student prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1494,18 +1494,18 @@ public final class MyDataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Student)
-        StudentOrBuilder {
+        com.example.netty.protobuf.MyDataInfo.StudentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MyDataInfo.internal_static_Student_descriptor;
+        return com.example.netty.protobuf.MyDataInfo.internal_static_Student_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MyDataInfo.internal_static_Student_fieldAccessorTable
+        return com.example.netty.protobuf.MyDataInfo.internal_static_Student_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Student.class, Builder.class);
+                com.example.netty.protobuf.MyDataInfo.Student.class, com.example.netty.protobuf.MyDataInfo.Student.Builder.class);
       }
 
       // Construct using com.example.netty.protobuf.MyDataInfo.Student.newBuilder()
@@ -1514,7 +1514,7 @@ public final class MyDataInfo {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1523,7 +1523,7 @@ public final class MyDataInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         id_ = 0;
@@ -1533,79 +1533,79 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MyDataInfo.internal_static_Student_descriptor;
+        return com.example.netty.protobuf.MyDataInfo.internal_static_Student_descriptor;
       }
 
-      @Override
-      public Student getDefaultInstanceForType() {
-        return Student.getDefaultInstance();
+      @java.lang.Override
+      public com.example.netty.protobuf.MyDataInfo.Student getDefaultInstanceForType() {
+        return com.example.netty.protobuf.MyDataInfo.Student.getDefaultInstance();
       }
 
-      @Override
-      public Student build() {
-        Student result = buildPartial();
+      @java.lang.Override
+      public com.example.netty.protobuf.MyDataInfo.Student build() {
+        com.example.netty.protobuf.MyDataInfo.Student result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public Student buildPartial() {
-        Student result = new Student(this);
+      @java.lang.Override
+      public com.example.netty.protobuf.MyDataInfo.Student buildPartial() {
+        com.example.netty.protobuf.MyDataInfo.Student result = new com.example.netty.protobuf.MyDataInfo.Student(this);
         result.id_ = id_;
         result.name_ = name_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Student) {
-          return mergeFrom((Student)other);
+        if (other instanceof com.example.netty.protobuf.MyDataInfo.Student) {
+          return mergeFrom((com.example.netty.protobuf.MyDataInfo.Student)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Student other) {
-        if (other == Student.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.example.netty.protobuf.MyDataInfo.Student other) {
+        if (other == com.example.netty.protobuf.MyDataInfo.Student.getDefaultInstance()) return this;
         if (other.getId() != 0) {
           setId(other.getId());
         }
@@ -1618,21 +1618,21 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Student parsedMessage = null;
+        com.example.netty.protobuf.MyDataInfo.Student parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Student) e.getUnfinishedMessage();
+          parsedMessage = (com.example.netty.protobuf.MyDataInfo.Student) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1672,21 +1672,21 @@ public final class MyDataInfo {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 2;</code>
        * @return The name.
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1695,11 +1695,11 @@ public final class MyDataInfo {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        Object ref = name_;
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -1712,7 +1712,7 @@ public final class MyDataInfo {
        * @return This builder for chaining.
        */
       public Builder setName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1747,13 +1747,13 @@ public final class MyDataInfo {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1764,18 +1764,18 @@ public final class MyDataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:Student)
-    private static final Student DEFAULT_INSTANCE;
+    private static final com.example.netty.protobuf.MyDataInfo.Student DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Student();
+      DEFAULT_INSTANCE = new com.example.netty.protobuf.MyDataInfo.Student();
     }
 
-    public static Student getDefaultInstance() {
+    public static com.example.netty.protobuf.MyDataInfo.Student getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Student>
         PARSER = new com.google.protobuf.AbstractParser<Student>() {
-      @Override
+      @java.lang.Override
       public Student parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1788,13 +1788,13 @@ public final class MyDataInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Student> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public Student getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.example.netty.protobuf.MyDataInfo.Student getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1808,7 +1808,7 @@ public final class MyDataInfo {
      * <code>string name = 1;</code>
      * @return The name.
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 1;</code>
      * @return The bytes for name.
@@ -1838,14 +1838,14 @@ public final class MyDataInfo {
       name_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new Worker();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1856,7 +1856,7 @@ public final class MyDataInfo {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1869,7 +1869,7 @@ public final class MyDataInfo {
               done = true;
               break;
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
@@ -1900,31 +1900,31 @@ public final class MyDataInfo {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return MyDataInfo.internal_static_Worker_descriptor;
+      return com.example.netty.protobuf.MyDataInfo.internal_static_Worker_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return MyDataInfo.internal_static_Worker_fieldAccessorTable
+      return com.example.netty.protobuf.MyDataInfo.internal_static_Worker_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              Worker.class, Builder.class);
+              com.example.netty.protobuf.MyDataInfo.Worker.class, com.example.netty.protobuf.MyDataInfo.Worker.Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile Object name_;
+    private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
      * @return The name.
      */
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -1935,11 +1935,11 @@ public final class MyDataInfo {
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -1958,7 +1958,7 @@ public final class MyDataInfo {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1968,7 +1968,7 @@ public final class MyDataInfo {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNameBytes().isEmpty()) {
@@ -1980,7 +1980,7 @@ public final class MyDataInfo {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1998,15 +1998,15 @@ public final class MyDataInfo {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof Worker)) {
+      if (!(obj instanceof com.example.netty.protobuf.MyDataInfo.Worker)) {
         return super.equals(obj);
       }
-      Worker other = (Worker) obj;
+      com.example.netty.protobuf.MyDataInfo.Worker other = (com.example.netty.protobuf.MyDataInfo.Worker) obj;
 
       if (!getName()
           .equals(other.getName())) return false;
@@ -2016,7 +2016,7 @@ public final class MyDataInfo {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2032,69 +2032,69 @@ public final class MyDataInfo {
       return hash;
     }
 
-    public static Worker parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Worker parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Worker parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Worker parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Worker parseFrom(byte[] data)
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static Worker parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static Worker parseFrom(java.io.InputStream input)
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Worker parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Worker parseDelimitedFrom(java.io.InputStream input)
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static Worker parseDelimitedFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static Worker parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static Worker parseFrom(
+    public static com.example.netty.protobuf.MyDataInfo.Worker parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2102,23 +2102,23 @@ public final class MyDataInfo {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(Worker prototype) {
+    public static Builder newBuilder(com.example.netty.protobuf.MyDataInfo.Worker prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2128,18 +2128,18 @@ public final class MyDataInfo {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Worker)
-        WorkerOrBuilder {
+        com.example.netty.protobuf.MyDataInfo.WorkerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return MyDataInfo.internal_static_Worker_descriptor;
+        return com.example.netty.protobuf.MyDataInfo.internal_static_Worker_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return MyDataInfo.internal_static_Worker_fieldAccessorTable
+        return com.example.netty.protobuf.MyDataInfo.internal_static_Worker_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                Worker.class, Builder.class);
+                com.example.netty.protobuf.MyDataInfo.Worker.class, com.example.netty.protobuf.MyDataInfo.Worker.Builder.class);
       }
 
       // Construct using com.example.netty.protobuf.MyDataInfo.Worker.newBuilder()
@@ -2148,7 +2148,7 @@ public final class MyDataInfo {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2157,7 +2157,7 @@ public final class MyDataInfo {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -2167,79 +2167,79 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return MyDataInfo.internal_static_Worker_descriptor;
+        return com.example.netty.protobuf.MyDataInfo.internal_static_Worker_descriptor;
       }
 
-      @Override
-      public Worker getDefaultInstanceForType() {
-        return Worker.getDefaultInstance();
+      @java.lang.Override
+      public com.example.netty.protobuf.MyDataInfo.Worker getDefaultInstanceForType() {
+        return com.example.netty.protobuf.MyDataInfo.Worker.getDefaultInstance();
       }
 
-      @Override
-      public Worker build() {
-        Worker result = buildPartial();
+      @java.lang.Override
+      public com.example.netty.protobuf.MyDataInfo.Worker build() {
+        com.example.netty.protobuf.MyDataInfo.Worker result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public Worker buildPartial() {
-        Worker result = new Worker(this);
+      @java.lang.Override
+      public com.example.netty.protobuf.MyDataInfo.Worker buildPartial() {
+        com.example.netty.protobuf.MyDataInfo.Worker result = new com.example.netty.protobuf.MyDataInfo.Worker(this);
         result.name_ = name_;
         result.age_ = age_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof Worker) {
-          return mergeFrom((Worker)other);
+        if (other instanceof com.example.netty.protobuf.MyDataInfo.Worker) {
+          return mergeFrom((com.example.netty.protobuf.MyDataInfo.Worker)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(Worker other) {
-        if (other == Worker.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.example.netty.protobuf.MyDataInfo.Worker other) {
+        if (other == com.example.netty.protobuf.MyDataInfo.Worker.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -2252,21 +2252,21 @@ public final class MyDataInfo {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        Worker parsedMessage = null;
+        com.example.netty.protobuf.MyDataInfo.Worker parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (Worker) e.getUnfinishedMessage();
+          parsedMessage = (com.example.netty.protobuf.MyDataInfo.Worker) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2276,21 +2276,21 @@ public final class MyDataInfo {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
        * @return The name.
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2299,11 +2299,11 @@ public final class MyDataInfo {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        Object ref = name_;
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -2316,7 +2316,7 @@ public final class MyDataInfo {
        * @return This builder for chaining.
        */
       public Builder setName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2381,13 +2381,13 @@ public final class MyDataInfo {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2398,18 +2398,18 @@ public final class MyDataInfo {
     }
 
     // @@protoc_insertion_point(class_scope:Worker)
-    private static final Worker DEFAULT_INSTANCE;
+    private static final com.example.netty.protobuf.MyDataInfo.Worker DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new Worker();
+      DEFAULT_INSTANCE = new com.example.netty.protobuf.MyDataInfo.Worker();
     }
 
-    public static Worker getDefaultInstance() {
+    public static com.example.netty.protobuf.MyDataInfo.Worker getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Worker>
         PARSER = new com.google.protobuf.AbstractParser<Worker>() {
-      @Override
+      @java.lang.Override
       public Worker parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2422,13 +2422,13 @@ public final class MyDataInfo {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Worker> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public Worker getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.example.netty.protobuf.MyDataInfo.Worker getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2457,7 +2457,7 @@ public final class MyDataInfo {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\016DataInfo.proto\"\244\001\n\tMyMessage\022&\n\tdata_t" +
       "ype\030\001 \001(\0162\023.MyMessage.DataType\022\033\n\007studen" +
       "t\030\002 \001(\0132\010.StudentH\000\022\031\n\006worker\030\003 \001(\0132\007.Wo" +
@@ -2476,19 +2476,19 @@ public final class MyDataInfo {
     internal_static_MyMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MyMessage_descriptor,
-        new String[] { "DataType", "Student", "Worker", "DataBody", });
+        new java.lang.String[] { "DataType", "Student", "Worker", "DataBody", });
     internal_static_Student_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Student_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Student_descriptor,
-        new String[] { "Id", "Name", });
+        new java.lang.String[] { "Id", "Name", });
     internal_static_Worker_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Worker_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Worker_descriptor,
-        new String[] { "Name", "Age", });
+        new java.lang.String[] { "Name", "Age", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

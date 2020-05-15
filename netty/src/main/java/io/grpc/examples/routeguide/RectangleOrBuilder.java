@@ -4,8 +4,8 @@
 package io.grpc.examples.routeguide;
 
 public interface RectangleOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:routeguide.Rectangle)
-    com.google.protobuf.MessageOrBuilder {
+        // @@protoc_insertion_point(interface_extends:routeguide.Rectangle)
+        com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
@@ -16,6 +16,7 @@ public interface RectangleOrBuilder extends
    * @return Whether the lo field is set.
    */
   boolean hasLo();
+
   /**
    * <pre>
    * One corner of the rectangle.
@@ -25,6 +26,7 @@ public interface RectangleOrBuilder extends
    * @return The lo.
    */
   Point getLo();
+
   /**
    * <pre>
    * One corner of the rectangle.
@@ -43,6 +45,7 @@ public interface RectangleOrBuilder extends
    * @return Whether the hi field is set.
    */
   boolean hasHi();
+
   /**
    * <pre>
    * The other corner of the rectangle.
@@ -52,6 +55,7 @@ public interface RectangleOrBuilder extends
    * @return The hi.
    */
   Point getHi();
+
   /**
    * <pre>
    * The other corner of the rectangle.

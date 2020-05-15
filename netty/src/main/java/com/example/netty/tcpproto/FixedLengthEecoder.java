@@ -10,9 +10,9 @@ import io.netty.handler.codec.MessageToByteEncoder;
  * @create 2020/01/23 20:52
  */
 public class FixedLengthEecoder extends MessageToByteEncoder<MessageProtocol> {
-    @Override
-    protected void encode(ChannelHandlerContext ctx, MessageProtocol msg, ByteBuf out) throws Exception {
-        out.writeInt(msg.getLength());
-        out.writeBytes(msg.getContent());
-    }
+  @Override
+  protected void encode(ChannelHandlerContext ctx, MessageProtocol msg, ByteBuf out) throws Exception {
+    out.writeInt(msg.getLength());
+    out.writeBytes(msg.getContent());
+  }
 }

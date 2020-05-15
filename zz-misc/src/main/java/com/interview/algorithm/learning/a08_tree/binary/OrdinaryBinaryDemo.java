@@ -1,5 +1,10 @@
 package com.interview.algorithm.learning.a08_tree.binary;
 
+import java.util.Arrays;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 /**
  @author yulshi
  @create 2020/02/27 22:40
@@ -8,26 +13,27 @@ public class OrdinaryBinaryDemo {
 
   public static void main(String[] args) {
 
-    BinaryTree binaryTree = new BinaryTree(new Node(8));
+    BinaryTree binaryTree = new BinaryTree(new int[]{8, 6, 2, 3, 5, 1, 4, 7});
+//    BinaryTree binaryTree = new BinaryTree(new Node(8));
+//
+//    Node node8 = new Node(8);
+//    Node node6 = new Node(6);
+//    Node node2 = new Node(2);
+//    Node node3 = new Node(3);
+//    Node node5 = new Node(5);
+//    Node node1 = new Node(1);
+//    Node node4 = new Node(4);
+//    Node node7 = new Node(7);
+//
+//    binaryTree.root.left = node6;
+//    binaryTree.root.right = node1;
+//    node6.left = node2;
+//    node6.right = node3;
+//    node3.left = node5;
+//    node1.left = node4;
+//    node1.right = node7;
 
-    Node node8 = new Node(8);
-    Node node6 = new Node(6);
-    Node node2 = new Node(2);
-    Node node3 = new Node(3);
-    Node node5 = new Node(5);
-    Node node1 = new Node(1);
-    Node node4 = new Node(4);
-    Node node7 = new Node(7);
-
-    binaryTree.root.left = node6;
-    binaryTree.root.right = node1;
-    node6.left = node2;
-    node6.right = node3;
-    node3.left = node5;
-    node1.left = node4;
-    node1.right = node7;
-
-    binaryTree.infixTranverse();
+    binaryTree.postfixTraverse();
 //    System.out.println(binaryTree.delete(6));
 //    binaryTree.prefixTraverse();
   }
@@ -40,6 +46,22 @@ public class OrdinaryBinaryDemo {
 
     public BinaryTree(Node root) {
       this.root = root;
+    }
+
+    public BinaryTree(int[] arr) {
+      Node[] nodes = new Node[arr.length];
+      for (int i = 0; i < arr.length; i++) {
+        nodes[i] = new Node(arr[i]);
+      }
+      for (int i = 0; i <= nodes.length / 2 - 1; i++) {
+        if (2 * i + 1 < nodes.length) {
+          nodes[i].left = nodes[2 * i + 1];
+        }
+        if (2 * i + 2 < nodes.length) {
+          nodes[i].right = nodes[2 * i + 2];
+        }
+      }
+      root = nodes[0];
     }
 
     /**
@@ -229,16 +251,16 @@ public class OrdinaryBinaryDemo {
       if (node.left != null && node.left.data == key) {
         Node deletingNode = node.left;
         // 待删除的节点是叶子节点，直接删除
-        if(deletingNode.left == null && deletingNode.right == null) {
+        if (deletingNode.left == null && deletingNode.right == null) {
           node.left = null;
           return true;
         }
         // 待删除的节点有一个子节点，直接把子节点上移
-        if(deletingNode.left == null) {
+        if (deletingNode.left == null) {
           node.left = deletingNode.right;
           return true;
         }
-        if(deletingNode.right == null) {
+        if (deletingNode.right == null) {
           node.left = deletingNode.left;
         }
         // 待删除的节点有两个子节点，把左子节点上移
@@ -246,7 +268,7 @@ public class OrdinaryBinaryDemo {
         node.left.right = deletingNode.right;
         return true;
       }
-      if(node.right != null && node.right.data == key) {
+      if (node.right != null && node.right.data == key) {
         node.right = null;
         return true;
       }
@@ -255,7 +277,7 @@ public class OrdinaryBinaryDemo {
       if (node.left != null) {
         result = deleteInternal(node.left, key);
       }
-      if(result) {
+      if (result) {
         return true;
       }
 

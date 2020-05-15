@@ -18,32 +18,32 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class ClientBootstrap {
 
-    private static ExecutorService threadPool = new ThreadPoolExecutor(
-            4, 4, 10, TimeUnit.SECONDS, new ArrayBlockingQueue<>(10));
+  private static ExecutorService threadPool = new ThreadPoolExecutor(
+          4, 4, 10, TimeUnit.SECONDS, new ArrayBlockingQueue<>(10));
 
-    public static Object getBean(Class<?> clazz) {
+  public static Object getBean(Class<?> clazz) {
 
-        Object proxyInstance = Proxy.newProxyInstance(
-                Thread.currentThread().getContextClassLoader(),
-                new Class[]{clazz}, (proxy, method, args) -> {
-                    String sendingMessage = method.getName() + "#" + args[0];
-                    log.debug("Sending message: " + sendingMessage);
-                    NettyClient client = new NettyClient("localhost", 6666);
-                    ClientHanlder handler = new ClientHanlder();
-                    handler.setParam(sendingMessage);
-                    client.connect(handler);
+    Object proxyInstance = Proxy.newProxyInstance(
+            Thread.currentThread().getContextClassLoader(),
+            new Class[]{clazz}, (proxy, method, args) -> {
+              String sendingMessage = method.getName() + "#" + args[0];
+              log.debug("Sending message: " + sendingMessage);
+              NettyClient client = new NettyClient("localhost", 6666);
+              ClientHanlder handler = new ClientHanlder();
+              handler.setParam(sendingMessage);
+              client.connect(handler);
 
-                    String result = threadPool.submit(handler).get();
-                    return result;
-                }
-        );
-        return proxyInstance;
-    }
+              String result = threadPool.submit(handler).get();
+              return result;
+            }
+    );
+    return proxyInstance;
+  }
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        HelloService service = (HelloService) getBean(HelloService.class);
-        System.out.println(service.hello("Jimmmmmy"));
+    HelloService service = (HelloService) getBean(HelloService.class);
+    System.out.println(service.hello("Jimmmmmy"));
 
-    }
+  }
 }

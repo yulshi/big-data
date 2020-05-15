@@ -13,8 +13,8 @@ public class Main {
     SingleLinkedList list = new SingleLinkedList();
     list.add(new Node(1));
     list.add(new Node(2));
-    list.add(new Node(3));
-    list.add(new Node(4));
+//    list.add(new Node(3));
+//    list.add(new Node(4));
     list.show();
 
     System.out.println("~~~~~~~~~~~~~~");
@@ -22,8 +22,8 @@ public class Main {
     System.out.println("Head = " + head);
 
     System.out.println("====================");
-    //show(reverse2(head));
-    reversePrint2(head);
+    show(reverse1(head));
+//    reversePrint2(head);
   }
 
   /**
@@ -41,7 +41,7 @@ public class Main {
    */
   private static Node reverse1(Node head) {
 
-    if (head.next == null || head.next.next == null) {
+    if (head.next == null) {
       return head;
     }
 

@@ -11,21 +11,21 @@ public class QuickSorting {
 
   public static void main(String[] args) {
 
-//        int[] arr = {2, 10, 8, 22, 11, 5, 12, 28, 21, 11};
-//        System.out.println(Arrays.toString(arr));
-    int[] arr = new int[8000000];
-    for (int i = 0; i < arr.length; i++) {
-      arr[i] = new Random().nextInt(800000);
-    }
-
-    long start = System.currentTimeMillis();
+        int[] arr = {2, 10, 8, 22, 11, 5, 11, 28, 21, 11};
+        System.out.println(Arrays.toString(arr));
+//    int[] arr = new int[8000000];
+//    for (int i = 0; i < arr.length; i++) {
+//      arr[i] = new Random().nextInt(800000);
+//    }
+//
+//    long start = System.currentTimeMillis();
     quick(arr, 0, arr.length - 1);
+//
+//    long end = System.currentTimeMillis();
+//    long diff = (end - start);
+//    System.out.println("time spent: " + diff + " ms");
 
-    long end = System.currentTimeMillis();
-    long diff = (end - start);
-    System.out.println("time spent: " + diff + " ms");
-
-//        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
   }
 
   private static void quick(int[] arr, int left, int right) {

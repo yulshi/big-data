@@ -4,8 +4,8 @@
 package io.grpc.examples.routeguide;
 
 public interface RouteNoteOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:routeguide.RouteNote)
-    com.google.protobuf.MessageOrBuilder {
+        // @@protoc_insertion_point(interface_extends:routeguide.RouteNote)
+        com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
@@ -16,6 +16,7 @@ public interface RouteNoteOrBuilder extends
    * @return Whether the location field is set.
    */
   boolean hasLocation();
+
   /**
    * <pre>
    * The location from which the message is sent.
@@ -25,6 +26,7 @@ public interface RouteNoteOrBuilder extends
    * @return The location.
    */
   Point getLocation();
+
   /**
    * <pre>
    * The location from which the message is sent.
@@ -43,6 +45,7 @@ public interface RouteNoteOrBuilder extends
    * @return The message.
    */
   String getMessage();
+
   /**
    * <pre>
    * The message to be sent.
@@ -52,5 +55,5 @@ public interface RouteNoteOrBuilder extends
    * @return The bytes for message.
    */
   com.google.protobuf.ByteString
-      getMessageBytes();
+  getMessageBytes();
 }

@@ -4,81 +4,92 @@
 package com.example.netty.protobuf;
 
 public final class ResultOuterClass {
-  private ResultOuterClass() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+  private ResultOuterClass() {
   }
 
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
+          com.google.protobuf.ExtensionRegistryLite registry) {
   }
+
+  public static void registerAllExtensions(
+          com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions(
+            (com.google.protobuf.ExtensionRegistryLite) registry);
+  }
+
   public interface ResultOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Result)
-      com.google.protobuf.MessageOrBuilder {
+          // @@protoc_insertion_point(interface_extends:Result)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string url = 1;</code>
      * @return The url.
      */
     String getUrl();
+
     /**
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
     com.google.protobuf.ByteString
-        getUrlBytes();
+    getUrlBytes();
 
     /**
      * <code>string title = 2;</code>
      * @return The title.
      */
     String getTitle();
+
     /**
      * <code>string title = 2;</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
-        getTitleBytes();
+    getTitleBytes();
 
     /**
      * <code>repeated string snippets = 3;</code>
      * @return A list containing the snippets.
      */
     java.util.List<String>
-        getSnippetsList();
+    getSnippetsList();
+
     /**
      * <code>repeated string snippets = 3;</code>
      * @return The count of snippets.
      */
     int getSnippetsCount();
+
     /**
      * <code>repeated string snippets = 3;</code>
      * @param index The index of the element to return.
      * @return The snippets at the given index.
      */
     String getSnippets(int index);
+
     /**
      * <code>repeated string snippets = 3;</code>
      * @param index The index of the value to return.
      * @return The bytes of the snippets at the given index.
      */
     com.google.protobuf.ByteString
-        getSnippetsBytes(int index);
+    getSnippetsBytes(int index);
   }
+
   /**
    * Protobuf type {@code Result}
    */
-  public  static final class Result extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Result)
-      ResultOrBuilder {
-  private static final long serialVersionUID = 0L;
+  public static final class Result extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:Result)
+          ResultOrBuilder {
+    private static final long serialVersionUID = 0L;
+
     // Use Result.newBuilder() to construct.
     private Result(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private Result() {
       url_ = "";
       title_ = "";
@@ -88,7 +99,7 @@ public final class ResultOuterClass {
     @Override
     @SuppressWarnings({"unused"})
     protected Object newInstance(
-        UnusedPrivateParameter unused) {
+            UnusedPrivateParameter unused) {
       return new Result();
     }
 
@@ -97,17 +108,18 @@ public final class ResultOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+
     private Result(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+              com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -139,7 +151,7 @@ public final class ResultOuterClass {
             }
             default: {
               if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
+                      input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -150,7 +162,7 @@ public final class ResultOuterClass {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+                e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           snippets_ = snippets_.getUnmodifiableView();
@@ -159,21 +171,23 @@ public final class ResultOuterClass {
         makeExtensionsImmutable();
       }
     }
+
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    getDescriptor() {
       return ResultOuterClass.internal_static_Result_descriptor;
     }
 
     @Override
     protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    internalGetFieldAccessorTable() {
       return ResultOuterClass.internal_static_Result_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Result.class, Builder.class);
+              .ensureFieldAccessorsInitialized(
+                      Result.class, Builder.class);
     }
 
     public static final int URL_FIELD_NUMBER = 1;
     private volatile Object url_;
+
     /**
      * <code>string url = 1;</code>
      * @return The url.
@@ -183,24 +197,25 @@ public final class ResultOuterClass {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
         String s = bs.toStringUtf8();
         url_ = s;
         return s;
       }
     }
+
     /**
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
     public com.google.protobuf.ByteString
-        getUrlBytes() {
+    getUrlBytes() {
       Object ref = url_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (String) ref);
         url_ = b;
         return b;
       } else {
@@ -210,6 +225,7 @@ public final class ResultOuterClass {
 
     public static final int TITLE_FIELD_NUMBER = 2;
     private volatile Object title_;
+
     /**
      * <code>string title = 2;</code>
      * @return The title.
@@ -219,24 +235,25 @@ public final class ResultOuterClass {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
         String s = bs.toStringUtf8();
         title_ = s;
         return s;
       }
     }
+
     /**
      * <code>string title = 2;</code>
      * @return The bytes for title.
      */
     public com.google.protobuf.ByteString
-        getTitleBytes() {
+    getTitleBytes() {
       Object ref = title_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (String) ref);
         title_ = b;
         return b;
       } else {
@@ -246,14 +263,16 @@ public final class ResultOuterClass {
 
     public static final int SNIPPETS_FIELD_NUMBER = 3;
     private com.google.protobuf.LazyStringList snippets_;
+
     /**
      * <code>repeated string snippets = 3;</code>
      * @return A list containing the snippets.
      */
     public com.google.protobuf.ProtocolStringList
-        getSnippetsList() {
+    getSnippetsList() {
       return snippets_;
     }
+
     /**
      * <code>repeated string snippets = 3;</code>
      * @return The count of snippets.
@@ -261,6 +280,7 @@ public final class ResultOuterClass {
     public int getSnippetsCount() {
       return snippets_.size();
     }
+
     /**
      * <code>repeated string snippets = 3;</code>
      * @param index The index of the element to return.
@@ -269,17 +289,19 @@ public final class ResultOuterClass {
     public String getSnippets(int index) {
       return snippets_.get(index);
     }
+
     /**
      * <code>repeated string snippets = 3;</code>
      * @param index The index of the value to return.
      * @return The bytes of the snippets at the given index.
      */
     public com.google.protobuf.ByteString
-        getSnippetsBytes(int index) {
+    getSnippetsBytes(int index) {
       return snippets_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
+
     @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -292,7 +314,7 @@ public final class ResultOuterClass {
 
     @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+            throws java.io.IOException {
       if (!getUrlBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
       }
@@ -333,7 +355,7 @@ public final class ResultOuterClass {
     @Override
     public boolean equals(final Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof Result)) {
         return super.equals(obj);
@@ -341,11 +363,11 @@ public final class ResultOuterClass {
       Result other = (Result) obj;
 
       if (!getUrl()
-          .equals(other.getUrl())) return false;
+              .equals(other.getUrl())) return false;
       if (!getTitle()
-          .equals(other.getTitle())) return false;
+              .equals(other.getTitle())) return false;
       if (!getSnippetsList()
-          .equals(other.getSnippetsList())) return false;
+              .equals(other.getSnippetsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -371,113 +393,130 @@ public final class ResultOuterClass {
     }
 
     public static Result parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static Result parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static Result parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static Result parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static Result parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static Result parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static Result parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
+
     public static Result parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static Result parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static Result parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static Result parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
+
     public static Result parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(Result prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+            BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+
     /**
      * Protobuf type {@code Result}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Result)
-        ResultOrBuilder {
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:Result)
+            ResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
+      getDescriptor() {
         return ResultOuterClass.internal_static_Result_descriptor;
       }
 
       @Override
       protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
+      internalGetFieldAccessorTable() {
         return ResultOuterClass.internal_static_Result_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                Result.class, Builder.class);
+                .ensureFieldAccessorsInitialized(
+                        Result.class, Builder.class);
       }
 
       // Construct using com.example.netty.protobuf.ResultOuterClass.Result.newBuilder()
@@ -486,15 +525,17 @@ public final class ResultOuterClass {
       }
 
       private Builder(
-          BuilderParent parent) {
+              BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
+
       @Override
       public Builder clear() {
         super.clear();
@@ -509,7 +550,7 @@ public final class ResultOuterClass {
 
       @Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
+      getDescriptorForType() {
         return ResultOuterClass.internal_static_Result_descriptor;
       }
 
@@ -546,38 +587,44 @@ public final class ResultOuterClass {
       public Builder clone() {
         return super.clone();
       }
+
       @Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              Object value) {
         return super.setField(field, value);
       }
+
       @Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof Result) {
-          return mergeFrom((Result)other);
+          return mergeFrom((Result) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -616,9 +663,9 @@ public final class ResultOuterClass {
 
       @Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         Result parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -632,9 +679,11 @@ public final class ResultOuterClass {
         }
         return this;
       }
+
       private int bitField0_;
 
       private Object url_ = "";
+
       /**
        * <code>string url = 1;</code>
        * @return The url.
@@ -643,7 +692,7 @@ public final class ResultOuterClass {
         Object ref = url_;
         if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           String s = bs.toStringUtf8();
           url_ = s;
           return s;
@@ -651,66 +700,71 @@ public final class ResultOuterClass {
           return (String) ref;
         }
       }
+
       /**
        * <code>string url = 1;</code>
        * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
-          getUrlBytes() {
+      getUrlBytes() {
         Object ref = url_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (String) ref);
           url_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string url = 1;</code>
        * @param value The url to set.
        * @return This builder for chaining.
        */
       public Builder setUrl(
-          String value) {
+              String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         url_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>string url = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
-        
+
         url_ = getDefaultInstance().getUrl();
         onChanged();
         return this;
       }
+
       /**
        * <code>string url = 1;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
        */
       public Builder setUrlBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         url_ = value;
         onChanged();
         return this;
       }
 
       private Object title_ = "";
+
       /**
        * <code>string title = 2;</code>
        * @return The title.
@@ -719,7 +773,7 @@ public final class ResultOuterClass {
         Object ref = title_;
         if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+                  (com.google.protobuf.ByteString) ref;
           String s = bs.toStringUtf8();
           title_ = s;
           return s;
@@ -727,80 +781,87 @@ public final class ResultOuterClass {
           return (String) ref;
         }
       }
+
       /**
        * <code>string title = 2;</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
-          getTitleBytes() {
+      getTitleBytes() {
         Object ref = title_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (String) ref);
           title_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
+
       /**
        * <code>string title = 2;</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
       public Builder setTitle(
-          String value) {
+              String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         title_ = value;
         onChanged();
         return this;
       }
+
       /**
        * <code>string title = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
-        
+
         title_ = getDefaultInstance().getTitle();
         onChanged();
         return this;
       }
+
       /**
        * <code>string title = 2;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
       public Builder setTitleBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         title_ = value;
         onChanged();
         return this;
       }
 
       private com.google.protobuf.LazyStringList snippets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+
       private void ensureSnippetsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           snippets_ = new com.google.protobuf.LazyStringArrayList(snippets_);
           bitField0_ |= 0x00000001;
-         }
+        }
       }
+
       /**
        * <code>repeated string snippets = 3;</code>
        * @return A list containing the snippets.
        */
       public com.google.protobuf.ProtocolStringList
-          getSnippetsList() {
+      getSnippetsList() {
         return snippets_.getUnmodifiableView();
       }
+
       /**
        * <code>repeated string snippets = 3;</code>
        * @return The count of snippets.
@@ -808,6 +869,7 @@ public final class ResultOuterClass {
       public int getSnippetsCount() {
         return snippets_.size();
       }
+
       /**
        * <code>repeated string snippets = 3;</code>
        * @param index The index of the element to return.
@@ -816,15 +878,17 @@ public final class ResultOuterClass {
       public String getSnippets(int index) {
         return snippets_.get(index);
       }
+
       /**
        * <code>repeated string snippets = 3;</code>
        * @param index The index of the value to return.
        * @return The bytes of the snippets at the given index.
        */
       public com.google.protobuf.ByteString
-          getSnippetsBytes(int index) {
+      getSnippetsBytes(int index) {
         return snippets_.getByteString(index);
       }
+
       /**
        * <code>repeated string snippets = 3;</code>
        * @param index The index to set the value at.
@@ -832,43 +896,46 @@ public final class ResultOuterClass {
        * @return This builder for chaining.
        */
       public Builder setSnippets(
-          int index, String value) {
+              int index, String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSnippetsIsMutable();
+          throw new NullPointerException();
+        }
+        ensureSnippetsIsMutable();
         snippets_.set(index, value);
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string snippets = 3;</code>
        * @param value The snippets to add.
        * @return This builder for chaining.
        */
       public Builder addSnippets(
-          String value) {
+              String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSnippetsIsMutable();
+          throw new NullPointerException();
+        }
+        ensureSnippetsIsMutable();
         snippets_.add(value);
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string snippets = 3;</code>
        * @param values The snippets to add.
        * @return This builder for chaining.
        */
       public Builder addAllSnippets(
-          Iterable<String> values) {
+              Iterable<String> values) {
         ensureSnippetsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, snippets_);
+                values, snippets_);
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string snippets = 3;</code>
        * @return This builder for chaining.
@@ -879,31 +946,33 @@ public final class ResultOuterClass {
         onChanged();
         return this;
       }
+
       /**
        * <code>repeated string snippets = 3;</code>
        * @param value The bytes of the snippets to add.
        * @return This builder for chaining.
        */
       public Builder addSnippetsBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
         ensureSnippetsIsMutable();
         snippets_.add(value);
         onChanged();
         return this;
       }
+
       @Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -913,6 +982,7 @@ public final class ResultOuterClass {
 
     // @@protoc_insertion_point(class_scope:Result)
     private static final Result DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new Result();
     }
@@ -922,12 +992,12 @@ public final class ResultOuterClass {
     }
 
     private static final com.google.protobuf.Parser<Result>
-        PARSER = new com.google.protobuf.AbstractParser<Result>() {
+            PARSER = new com.google.protobuf.AbstractParser<Result>() {
       @Override
       public Result parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         return new Result(input, extensionRegistry);
       }
     };
@@ -949,33 +1019,35 @@ public final class ResultOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Result_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Result_fieldAccessorTable;
+          internal_static_Result_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_Result_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
+  getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
+
+  private static com.google.protobuf.Descriptors.FileDescriptor
+          descriptor;
+
   static {
     String[] descriptorData = {
-      "\n\014result.proto\"6\n\006Result\022\013\n\003url\030\001 \001(\t\022\r\n" +
-      "\005title\030\002 \001(\t\022\020\n\010snippets\030\003 \003(\tB\034\n\032com.ex" +
-      "ample.netty.protobufb\006proto3"
+            "\n\014result.proto\"6\n\006Result\022\013\n\003url\030\001 \001(\t\022\r\n" +
+                    "\005title\030\002 \001(\t\022\020\n\010snippets\030\003 \003(\tB\034\n\032com.ex" +
+                    "ample.netty.protobufb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
+            .internalBuildGeneratedFileFrom(descriptorData,
+                    new com.google.protobuf.Descriptors.FileDescriptor[]{
+                    });
     internal_static_Result_descriptor =
-      getDescriptor().getMessageTypes().get(0);
+            getDescriptor().getMessageTypes().get(0);
     internal_static_Result_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Result_descriptor,
-        new String[] { "Url", "Title", "Snippets", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_Result_descriptor,
+            new String[]{"Url", "Title", "Snippets",});
   }
 
   // @@protoc_insertion_point(outer_class_scope)

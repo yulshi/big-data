@@ -1,10 +1,6 @@
 package com.interview.algorithm.learning.a03_linkedlist.circle;
 
-import com.interview.algorithm.LinkedListDemo;
-import com.sun.org.apache.xml.internal.security.Init;
-
 import java.util.HashSet;
-import java.util.List;
 
 /**
  * @author yulshi
@@ -19,7 +15,7 @@ public class Main {
     show(head);
 
     System.out.println("~~~~~~~~~~~~~~");
-    josephu(head, 5, 1, 2);
+    joseph(head, 5, 1, 2);
 
   }
 
@@ -51,7 +47,7 @@ public class Main {
   }
 
   /**
-   * Josephu（约瑟夫）问题
+   * Joseph（约瑟夫）问题
    * <p>
    * 编号1之n个人围坐在一起，第k（1<=k<=n）个人从1开始报数，数到m的那个人出列，
    * 然后他的下一位又从1开始报数，数到m的那个人再出列，直到所有人出列为止。
@@ -67,7 +63,7 @@ public class Main {
    * @param head
    * @return
    */
-  private static void josephu(Node head, int n, int k, int m) {
+  private static void joseph(Node head, int n, int k, int m) {
 
     Node prev = null;
     Node curr = head;

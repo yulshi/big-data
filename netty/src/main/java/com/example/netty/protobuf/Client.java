@@ -16,53 +16,53 @@ import java.util.Random;
  */
 @Slf4j
 public class Client {
-    public static void main(String[] args) {
-        EventLoopGroup group = new NioEventLoopGroup();
-        Bootstrap b = new Bootstrap();
-        try {
-            b.group(group).channel(NioSocketChannel.class)
-                    .option(ChannelOption.SO_KEEPALIVE, true)
-                    .handler(new ChannelInitializer<SocketChannel>() {
-                        @Override
-                        protected void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast("encoder", new ProtobufEncoder());
-                            ch.pipeline().addLast(new ClientHandler());
-                        }
-                    });
-            ChannelFuture channelFuture = b.connect("localhost", 6666).syncUninterruptibly();
+  public static void main(String[] args) {
+    EventLoopGroup group = new NioEventLoopGroup();
+    Bootstrap b = new Bootstrap();
+    try {
+      b.group(group).channel(NioSocketChannel.class)
+              .option(ChannelOption.SO_KEEPALIVE, true)
+              .handler(new ChannelInitializer<SocketChannel>() {
+                @Override
+                protected void initChannel(SocketChannel ch) throws Exception {
+                  ch.pipeline().addLast("encoder", new ProtobufEncoder());
+                  ch.pipeline().addLast(new ClientHandler());
+                }
+              });
+      ChannelFuture channelFuture = b.connect("localhost", 6666).syncUninterruptibly();
 
-            channelFuture.channel().closeFuture().syncUninterruptibly();
-        } finally {
-            group.shutdownGracefully();
-        }
+      channelFuture.channel().closeFuture().syncUninterruptibly();
+    } finally {
+      group.shutdownGracefully();
+    }
+  }
+
+  private static class ClientHandler extends SimpleChannelInboundHandler<MyDataInfo.MyMessage> {
+
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+
+      int random = new Random().nextInt(3);
+      if (random == 0) {
+        log.debug("sending student info ...");
+        MyDataInfo.MyMessage jimmy = MyDataInfo.MyMessage.newBuilder()
+                .setDataType(MyDataInfo.MyMessage.DataType.StudentType)
+                .setStudent(MyDataInfo.Student.newBuilder().setId(2)
+                        .setName("Jimmy").build()).build();
+        ctx.writeAndFlush(jimmy);
+      } else {
+        log.debug("sending worker info ...");
+        MyDataInfo.MyMessage yulong = MyDataInfo.MyMessage.newBuilder()
+                .setDataType(MyDataInfo.MyMessage.DataType.WorkerType)
+                .setWorker(MyDataInfo.Worker.newBuilder()
+                        .setAge(30).setName("Yulong").build()).build();
+        ctx.writeAndFlush(yulong);
+      }
     }
 
-    private static class ClientHandler extends SimpleChannelInboundHandler<MyDataInfo.MyMessage> {
+    @Override
+    protected void channelRead0(ChannelHandlerContext ctx, MyDataInfo.MyMessage msg) throws Exception {
 
-        @Override
-        public void channelActive(ChannelHandlerContext ctx) throws Exception {
-
-            int random = new Random().nextInt(3);
-            if (random == 0) {
-                log.debug("sending student info ...");
-                MyDataInfo.MyMessage jimmy = MyDataInfo.MyMessage.newBuilder()
-                        .setDataType(MyDataInfo.MyMessage.DataType.StudentType)
-                        .setStudent(MyDataInfo.Student.newBuilder().setId(2)
-                                .setName("Jimmy").build()).build();
-                ctx.writeAndFlush(jimmy);
-            } else {
-                log.debug("sending worker info ...");
-                MyDataInfo.MyMessage yulong = MyDataInfo.MyMessage.newBuilder()
-                        .setDataType(MyDataInfo.MyMessage.DataType.WorkerType)
-                        .setWorker(MyDataInfo.Worker.newBuilder()
-                                .setAge(30).setName("Yulong").build()).build();
-                ctx.writeAndFlush(yulong);
-            }
-        }
-
-        @Override
-        protected void channelRead0(ChannelHandlerContext ctx, MyDataInfo.MyMessage msg) throws Exception {
-
-        }
     }
+  }
 }

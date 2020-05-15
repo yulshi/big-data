@@ -23,7 +23,10 @@ object WordCountWindow {
     val wordAndOne = wordDStream.map((_, 1))
 
     val wordAndCount = wordAndOne.reduceByKeyAndWindow(
-      (x: Int, y: Int) => x + y,
+      (x: Int, y: Int) => {
+        println(x, y)
+        x + y
+      },
       Seconds(6),
       Seconds(3))
 

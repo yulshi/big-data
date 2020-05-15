@@ -4,8 +4,8 @@
 package io.grpc.examples.routeguide;
 
 public interface RouteSummaryOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:routeguide.RouteSummary)
-    com.google.protobuf.MessageOrBuilder {
+        // @@protoc_insertion_point(interface_extends:routeguide.RouteSummary)
+        com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>

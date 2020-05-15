@@ -39,5 +39,5 @@ message ErrorStatus {
 }
 
 service SearchService {
-    rpc Search(SearchRequest) returns (SearchResponse);
+    rpc Search (SearchRequest) returns (SearchResponse);
 }

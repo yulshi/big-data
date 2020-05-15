@@ -12,19 +12,19 @@ public class HuffmanDemo {
 
   public static void main(String[] args) {
 
-//    int[] arr = {13, 7, 8, 3, 29, 6, 1};
+    int[] arr = {13, 7, 8, 3, 29, 6, 1};
+
+    HuffmanTree huffmanTree = new HuffmanTree(arr);
+    huffmanTree.prefixTraverse();
+
+//    int num  = 256;
 //
-//    HuffmanTree huffmanTree = new HuffmanTree(arr);
-//    huffmanTree.prefixTraverse();
-
-    int num  = 256;
-
-    StringBuilder sb = new StringBuilder();
-    for (int i = 7; i >= 0; i--) {
-      sb.append((num >> i) & 0x01);
-    }
-
-    System.out.println(sb.toString());
+//    StringBuilder sb = new StringBuilder();
+//    for (int i = 7; i >= 0; i--) {
+//      sb.append((num >> i) & 0x01);
+//    }
+//
+//    System.out.println(sb.toString());
 
   }
 

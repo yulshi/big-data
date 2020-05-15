@@ -18,43 +18,43 @@ import java.util.Scanner;
 @Slf4j
 public class ChatClient {
 
-    public static void main(String[] args) {
-        EventLoopGroup group = new NioEventLoopGroup();
-        Bootstrap b = new Bootstrap();
-        try {
-            b.group(group).channel(NioSocketChannel.class)
-                    .option(ChannelOption.SO_KEEPALIVE, true)
-                    .handler(new ChannelInitializer<SocketChannel>() {
-                        @Override
-                        protected void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(new StringDecoder());
-                            ch.pipeline().addLast(new StringEncoder());
-                            ch.pipeline().addLast(new ChatHandler());
-                        }
-                    });
-            ChannelFuture channelFuture = b.connect("127.0.0.1", 6666).syncUninterruptibly();
+  public static void main(String[] args) {
+    EventLoopGroup group = new NioEventLoopGroup();
+    Bootstrap b = new Bootstrap();
+    try {
+      b.group(group).channel(NioSocketChannel.class)
+              .option(ChannelOption.SO_KEEPALIVE, true)
+              .handler(new ChannelInitializer<SocketChannel>() {
+                @Override
+                protected void initChannel(SocketChannel ch) throws Exception {
+                  ch.pipeline().addLast(new StringDecoder());
+                  ch.pipeline().addLast(new StringEncoder());
+                  ch.pipeline().addLast(new ChatHandler());
+                }
+              });
+      ChannelFuture channelFuture = b.connect("127.0.0.1", 6666).syncUninterruptibly();
 
-            Channel channel = channelFuture.channel();
+      Channel channel = channelFuture.channel();
 
-            // The scanner should be running on the main thread
-            Scanner scanner = new Scanner(System.in, "utf-8");
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                channel.writeAndFlush(line + "\n");
-                log.info("Sent message: " + line);
-            }
-            channelFuture.channel().closeFuture().syncUninterruptibly();
-        } finally {
-            group.shutdownGracefully();
-        }
+      // The scanner should be running on the main thread
+      Scanner scanner = new Scanner(System.in, "utf-8");
+      while (scanner.hasNextLine()) {
+        String line = scanner.nextLine();
+        channel.writeAndFlush(line + "\n");
+        log.info("Sent message: " + line);
+      }
+      channelFuture.channel().closeFuture().syncUninterruptibly();
+    } finally {
+      group.shutdownGracefully();
     }
+  }
 
-    private static class ChatHandler extends SimpleChannelInboundHandler<String> {
+  private static class ChatHandler extends SimpleChannelInboundHandler<String> {
 
-        @Override
-        protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
-            log.debug("Received: " + msg);
-            System.out.println(msg);
-        }
+    @Override
+    protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
+      log.debug("Received: " + msg);
+      System.out.println(msg);
     }
+  }
 }

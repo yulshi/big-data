@@ -13,10 +13,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ByteBufDemo {
 
-    public static void main(String[] args) {
-        ByteBuf buf = Unpooled.copiedBuffer("Hello,Netty", CharsetUtil.UTF_8);
-        int index = buf.forEachByte(ByteProcessor.FIND_COMMA);
-        System.out.println(index);
+  public static void main(String[] args) {
+    ByteBuf buf = Unpooled.copiedBuffer("Hello,Netty", CharsetUtil.UTF_8);
 
-    }
+    buf.writeBytes("a long sentence that is made up".getBytes());
+
+    int index = buf.forEachByte(ByteProcessor.FIND_COMMA);
+    System.out.println(index);
+
+  }
 }

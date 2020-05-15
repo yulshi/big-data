@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
+import io.netty.handler.codec.ReplayingDecoder;
 
 import java.util.List;
 
@@ -11,10 +12,10 @@ import java.util.List;
  * @author yulshi
  * @create 2020/01/23 20:51
  */
-public class FixedLengthDecoder extends ByteToMessageDecoder {
-
-    @Override
-    protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
+//public class FixedLengthDecoder extends ByteToMessageDecoder {
+public class FixedLengthDecoder extends ReplayingDecoder<Void> {
+  @Override
+  protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
 //        if (in.readableBytes() < 4) {
 //            return;
 //        }
@@ -28,13 +29,13 @@ public class FixedLengthDecoder extends ByteToMessageDecoder {
 //            return;
 //        }
 //
-        MessageProtocol mp = new MessageProtocol();
-        int length = in.readInt();
-        mp.setLength(length);
-        byte[] content = new byte[length];
-        in.readBytes(content);
-        mp.setContent(content);
+    MessageProtocol mp = new MessageProtocol();
+    int length = in.readInt();
+    mp.setLength(length);
+    byte[] content = new byte[length];
+    in.readBytes(content);
+    mp.setContent(content);
 
-        out.add(mp);
-    }
+    out.add(mp);
+  }
 }

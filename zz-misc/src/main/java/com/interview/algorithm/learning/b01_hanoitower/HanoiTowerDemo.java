@@ -7,7 +7,7 @@ package com.interview.algorithm.learning.b01_hanoitower;
 public class HanoiTowerDemo {
 
   public static void main(String[] args) {
-    hanoiTower(20, 'A', 'B', 'C');
+    hanoiTower(3, 'A', 'B', 'C');
     System.out.println("需要的步数：" + counter);
   }
 

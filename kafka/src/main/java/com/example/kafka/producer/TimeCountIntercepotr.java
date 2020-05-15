@@ -21,7 +21,7 @@ public class TimeCountIntercepotr implements ProducerInterceptor<String, String>
     String newValue = System.currentTimeMillis() + "_" + oldValue;
     return new ProducerRecord<>(record.topic(),
             record.partition(), record.timestamp(),
-            record.key(), record.value());
+            record.key(), newValue);
   }
 
   @Override

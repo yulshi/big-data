@@ -6,5 +6,5 @@ package com.example.netty.rpc.common;
  */
 public interface HelloService {
 
-    String hello(String name);
+  String hello(String name);
 }

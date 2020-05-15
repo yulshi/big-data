@@ -5,15 +5,15 @@
     <title>WebSocket Client</title>
 
     <script>
-        if(window.WebSocket) {
+        if (window.WebSocket) {
             var ws = new WebSocket("ws://localhost:8080/hello");
             ws.onopen = event => {
-                document.getElementById('responsetext').value="connected...";
+                document.getElementById('responsetext').value = "connected...";
             }
             ws.onclose = function (event) {
                 document.getElementById('responsetext').value += "\n" + "disconnected";
             }
-            ws.onmessage = function(event) {
+            ws.onmessage = function (event) {
                 document.getElementById('responsetext').value += "\n" + event.data;
             }
         } else {

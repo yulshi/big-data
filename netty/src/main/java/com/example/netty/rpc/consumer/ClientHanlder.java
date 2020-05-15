@@ -17,30 +17,30 @@ import java.util.concurrent.locks.ReentrantLock;
 @Slf4j
 public class ClientHanlder extends SimpleChannelInboundHandler<String> implements Callable<String> {
 
-    private ChannelHandlerContext context;
-    private String param = null;
-    private String result;
+  private ChannelHandlerContext context;
+  private String param = null;
+  private String result;
 
-    @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        this.context = ctx;
-    }
+  @Override
+  public void channelActive(ChannelHandlerContext ctx) throws Exception {
+    this.context = ctx;
+  }
 
-    @Override
-    protected synchronized void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
-        result = msg;
-        notify();
-    }
+  @Override
+  protected synchronized void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
+    result = msg;
+    notify();
+  }
 
-    public void setParam(String param) {
-        this.param = param;
-    }
+  public void setParam(String param) {
+    this.param = param;
+  }
 
-    @Override
-    public synchronized String call() throws Exception {
-        log.debug("sending ...");
-        context.writeAndFlush(param);
-        wait();
-        return result;
-    }
+  @Override
+  public synchronized String call() throws Exception {
+    log.debug("sending ...");
+    context.writeAndFlush(param);
+    wait();
+    return result;
+  }
 }

@@ -4,8 +4,8 @@
 package io.grpc.examples.routeguide;
 
 public interface FeatureOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:routeguide.Feature)
-    com.google.protobuf.MessageOrBuilder {
+        // @@protoc_insertion_point(interface_extends:routeguide.Feature)
+        com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
@@ -16,6 +16,7 @@ public interface FeatureOrBuilder extends
    * @return The name.
    */
   String getName();
+
   /**
    * <pre>
    * The name of the feature.
@@ -25,7 +26,7 @@ public interface FeatureOrBuilder extends
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
-      getNameBytes();
+  getNameBytes();
 
   /**
    * <pre>
@@ -36,6 +37,7 @@ public interface FeatureOrBuilder extends
    * @return Whether the location field is set.
    */
   boolean hasLocation();
+
   /**
    * <pre>
    * The point where the feature is detected.
@@ -45,6 +47,7 @@ public interface FeatureOrBuilder extends
    * @return The location.
    */
   Point getLocation();
+
   /**
    * <pre>
    * The point where the feature is detected.

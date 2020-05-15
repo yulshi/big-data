@@ -31,7 +31,7 @@ public class SelectSorting {
   private static void select(int[] arr) {
 
     // 外层循环用于指定排序的次数
-    for (int i = 0; i < arr.length; i++) {
+    for (int i = 0; i < arr.length -1; i++) {
       // 内层循环用于与i所在的元素进行比较交换
       for (int j = i + 1; j < arr.length; j++) {
         if (arr[i] > arr[j]) {

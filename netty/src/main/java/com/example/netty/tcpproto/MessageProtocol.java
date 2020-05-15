@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class MessageProtocol {
-    private int length;
-    private byte[] content;
+  private int length;
+  private byte[] content;
 
-    public MessageProtocol(byte[] content) {
-        this.length = content.length;
-        this.content = content;
-    }
+  public MessageProtocol(byte[] content) {
+    this.length = content.length;
+    this.content = content;
+  }
 }

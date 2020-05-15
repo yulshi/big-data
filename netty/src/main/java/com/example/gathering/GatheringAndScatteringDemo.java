@@ -17,49 +17,49 @@ import java.util.concurrent.Executors;
  */
 public class GatheringAndScatteringDemo {
 
-    public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException {
 
-        final ExecutorService threadPool = Executors.newCachedThreadPool();
+    final ExecutorService threadPool = Executors.newCachedThreadPool();
 
-        ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
-        InetSocketAddress address = new InetSocketAddress(InetAddress.getLocalHost(), 7000);
-        serverSocketChannel.bind(address);
+    ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
+    InetSocketAddress address = new InetSocketAddress(InetAddress.getLocalHost(), 7000);
+    serverSocketChannel.bind(address);
 
-        while (true) {
-            System.out.println("Waiting for new client to connect...");
-            final SocketChannel socketChannel = serverSocketChannel.accept();
-            threadPool.execute(() -> {
-                echo(socketChannel);
-            });
-        }
-
+    while (true) {
+      System.out.println("Waiting for new client to connect...");
+      final SocketChannel socketChannel = serverSocketChannel.accept();
+      threadPool.execute(() -> {
+        echo(socketChannel);
+      });
     }
 
-    private static void echo(SocketChannel socketChannel) {
+  }
 
-        ByteBuffer[] buffers = new ByteBuffer[2];
-        buffers[0] = ByteBuffer.allocate(5);
-        buffers[1] = ByteBuffer.allocate(3);
+  private static void echo(SocketChannel socketChannel) {
 
-        try {
-            while (true) {
-                // read
-                long readLength = 0;
+    ByteBuffer[] buffers = new ByteBuffer[2];
+    buffers[0] = ByteBuffer.allocate(5);
+    buffers[1] = ByteBuffer.allocate(3);
 
-                while (readLength < 8) {
-                    readLength += socketChannel.read(buffers);
-                }
-                // flip
-                Arrays.asList(buffers).stream().forEach(ByteBuffer::flip);
-                // write
-                long writeLenth = 0;
-                while (writeLenth < 8) {
-                    writeLenth += socketChannel.write(buffers);
-                }
-                Arrays.asList(buffers).stream().forEach(ByteBuffer::clear);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+    try {
+      while (true) {
+        // read
+        long readLength = 0;
+
+        while (readLength < 8) {
+          readLength += socketChannel.read(buffers);
         }
+        // flip
+        Arrays.asList(buffers).stream().forEach(ByteBuffer::flip);
+        // write
+        long writeLenth = 0;
+        while (writeLenth < 8) {
+          writeLenth += socketChannel.write(buffers);
+        }
+        Arrays.asList(buffers).stream().forEach(ByteBuffer::clear);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+  }
 }

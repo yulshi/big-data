@@ -17,30 +17,30 @@ import io.netty.handler.codec.string.StringEncoder;
  */
 public class NettyClient {
 
-    private final String host;
-    private final int port;
+  private final String host;
+  private final int port;
 
-    public NettyClient(String host, int port) {
-        this.host = host;
-        this.port = port;
-    }
+  public NettyClient(String host, int port) {
+    this.host = host;
+    this.port = port;
+  }
 
-    public void connect(ClientHanlder hanlder) {
-        EventLoopGroup group = new NioEventLoopGroup();
-        Bootstrap b = new Bootstrap();
+  public void connect(ClientHanlder hanlder) {
+    EventLoopGroup group = new NioEventLoopGroup();
+    Bootstrap b = new Bootstrap();
 
-        b.group(group).channel(NioSocketChannel.class)
-                .option(ChannelOption.TCP_NODELAY, true)
-                .handler(new ChannelInitializer<SocketChannel>() {
-                             @Override
-                             protected void initChannel(SocketChannel ch) throws Exception {
-                                 ch.pipeline().addLast(new StringDecoder());
-                                 ch.pipeline().addLast(new StringEncoder());
-                                 ch.pipeline().addLast(hanlder);
-                             }
-                         }
-                );
-        b.connect(host, port).syncUninterruptibly();
+    b.group(group).channel(NioSocketChannel.class)
+            .option(ChannelOption.TCP_NODELAY, true)
+            .handler(new ChannelInitializer<SocketChannel>() {
+                       @Override
+                       protected void initChannel(SocketChannel ch) throws Exception {
+                         ch.pipeline().addLast(new StringDecoder());
+                         ch.pipeline().addLast(new StringEncoder());
+                         ch.pipeline().addLast(hanlder);
+                       }
+                     }
+            );
+    b.connect(host, port).syncUninterruptibly();
 
-    }
+  }
 }

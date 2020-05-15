@@ -40,7 +40,7 @@ public class HeapSorting {
    *
    * @param arr 给定的数组
    * @param i 调整大顶堆的当前索引
-   * @param len 需要调整的数据长度
+   * @param len 需要调整的数组长度
    */
   public static void toMaxHeap(int[] arr, int i, int len) {
 

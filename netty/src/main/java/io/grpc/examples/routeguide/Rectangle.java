@@ -11,22 +11,24 @@ package io.grpc.examples.routeguide;
  *
  * Protobuf type {@code routeguide.Rectangle}
  */
-public  final class Rectangle extends
-    com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:routeguide.Rectangle)
-    RectangleOrBuilder {
-private static final long serialVersionUID = 0L;
+public final class Rectangle extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:routeguide.Rectangle)
+        RectangleOrBuilder {
+  private static final long serialVersionUID = 0L;
+
   // Use Rectangle.newBuilder() to construct.
   private Rectangle(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
+
   private Rectangle() {
   }
 
   @Override
   @SuppressWarnings({"unused"})
   protected Object newInstance(
-      UnusedPrivateParameter unused) {
+          UnusedPrivateParameter unused) {
     return new Rectangle();
   }
 
@@ -35,16 +37,17 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
+
   private Rectangle(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
       throw new NullPointerException();
     }
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
+            com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
       boolean done = false;
       while (!done) {
@@ -81,7 +84,7 @@ private static final long serialVersionUID = 0L;
           }
           default: {
             if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
+                    input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
             break;
@@ -92,27 +95,29 @@ private static final long serialVersionUID = 0L;
       throw e.setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
+              e).setUnfinishedMessage(this);
     } finally {
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
+
   public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+  getDescriptor() {
     return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_Rectangle_descriptor;
   }
 
   @Override
   protected FieldAccessorTable
-      internalGetFieldAccessorTable() {
+  internalGetFieldAccessorTable() {
     return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_Rectangle_fieldAccessorTable
-        .ensureFieldAccessorsInitialized(
-            Rectangle.class, Builder.class);
+            .ensureFieldAccessorsInitialized(
+                    Rectangle.class, Builder.class);
   }
 
   public static final int LO_FIELD_NUMBER = 1;
   private Point lo_;
+
   /**
    * <pre>
    * One corner of the rectangle.
@@ -124,6 +129,7 @@ private static final long serialVersionUID = 0L;
   public boolean hasLo() {
     return lo_ != null;
   }
+
   /**
    * <pre>
    * One corner of the rectangle.
@@ -135,6 +141,7 @@ private static final long serialVersionUID = 0L;
   public Point getLo() {
     return lo_ == null ? Point.getDefaultInstance() : lo_;
   }
+
   /**
    * <pre>
    * One corner of the rectangle.
@@ -148,6 +155,7 @@ private static final long serialVersionUID = 0L;
 
   public static final int HI_FIELD_NUMBER = 2;
   private Point hi_;
+
   /**
    * <pre>
    * The other corner of the rectangle.
@@ -159,6 +167,7 @@ private static final long serialVersionUID = 0L;
   public boolean hasHi() {
     return hi_ != null;
   }
+
   /**
    * <pre>
    * The other corner of the rectangle.
@@ -170,6 +179,7 @@ private static final long serialVersionUID = 0L;
   public Point getHi() {
     return hi_ == null ? Point.getDefaultInstance() : hi_;
   }
+
   /**
    * <pre>
    * The other corner of the rectangle.
@@ -182,6 +192,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
+
   @Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -194,7 +205,7 @@ private static final long serialVersionUID = 0L;
 
   @Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
-                      throws java.io.IOException {
+          throws java.io.IOException {
     if (lo_ != null) {
       output.writeMessage(1, getLo());
     }
@@ -212,11 +223,11 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (lo_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getLo());
+              .computeMessageSize(1, getLo());
     }
     if (hi_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getHi());
+              .computeMessageSize(2, getHi());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -226,7 +237,7 @@ private static final long serialVersionUID = 0L;
   @Override
   public boolean equals(final Object obj) {
     if (obj == this) {
-     return true;
+      return true;
     }
     if (!(obj instanceof Rectangle)) {
       return super.equals(obj);
@@ -236,12 +247,12 @@ private static final long serialVersionUID = 0L;
     if (hasLo() != other.hasLo()) return false;
     if (hasLo()) {
       if (!getLo()
-          .equals(other.getLo())) return false;
+              .equals(other.getLo())) return false;
     }
     if (hasHi() != other.hasHi()) return false;
     if (hasHi()) {
       if (!getHi()
-          .equals(other.getHi())) return false;
+              .equals(other.getHi())) return false;
     }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -268,95 +279,112 @@ private static final long serialVersionUID = 0L;
   }
 
   public static Rectangle parseFrom(
-      java.nio.ByteBuffer data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static Rectangle parseFrom(
-      java.nio.ByteBuffer data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static Rectangle parseFrom(
-      com.google.protobuf.ByteString data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static Rectangle parseFrom(
-      com.google.protobuf.ByteString data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static Rectangle parseFrom(byte[] data)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
+
   public static Rectangle parseFrom(
-      byte[] data,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
+
   public static Rectangle parseFrom(java.io.InputStream input)
-      throws java.io.IOException {
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+            .parseWithIOException(PARSER, input);
   }
+
   public static Rectangle parseFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+            .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static Rectangle parseDelimitedFrom(java.io.InputStream input)
-      throws java.io.IOException {
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input);
+            .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static Rectangle parseDelimitedFrom(
-      java.io.InputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static Rectangle parseFrom(
-      com.google.protobuf.CodedInputStream input)
-      throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input);
+            .parseWithIOException(PARSER, input);
   }
+
   public static Rectangle parseFrom(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
-        .parseWithIOException(PARSER, input, extensionRegistry);
+            .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
   @Override
-  public Builder newBuilderForType() { return newBuilder(); }
+  public Builder newBuilderForType() {
+    return newBuilder();
+  }
+
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
+
   public static Builder newBuilder(Rectangle prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
+
   @Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
-        ? new Builder() : new Builder().mergeFrom(this);
+            ? new Builder() : new Builder().mergeFrom(this);
   }
 
   @Override
   protected Builder newBuilderForType(
-      BuilderParent parent) {
+          BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
+
   /**
    * <pre>
    * A latitude-longitude rectangle, represented as two diagonally opposite
@@ -366,20 +394,20 @@ private static final long serialVersionUID = 0L;
    * Protobuf type {@code routeguide.Rectangle}
    */
   public static final class Builder extends
-      com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:routeguide.Rectangle)
-      io.grpc.examples.routeguide.RectangleOrBuilder {
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:routeguide.Rectangle)
+          io.grpc.examples.routeguide.RectangleOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+    getDescriptor() {
       return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_Rectangle_descriptor;
     }
 
     @Override
     protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
+    internalGetFieldAccessorTable() {
       return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_Rectangle_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              Rectangle.class, Builder.class);
+              .ensureFieldAccessorsInitialized(
+                      Rectangle.class, Builder.class);
     }
 
     // Construct using io.grpc.examples.routeguide.Rectangle.newBuilder()
@@ -388,15 +416,17 @@ private static final long serialVersionUID = 0L;
     }
 
     private Builder(
-        BuilderParent parent) {
+            BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
+
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
       }
     }
+
     @Override
     public Builder clear() {
       super.clear();
@@ -417,7 +447,7 @@ private static final long serialVersionUID = 0L;
 
     @Override
     public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
+    getDescriptorForType() {
       return io.grpc.examples.routeguide.RouteGuideProto.internal_static_routeguide_Rectangle_descriptor;
     }
 
@@ -456,38 +486,44 @@ private static final long serialVersionUID = 0L;
     public Builder clone() {
       return super.clone();
     }
+
     @Override
     public Builder setField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
       return super.setField(field, value);
     }
+
     @Override
     public Builder clearField(
-        com.google.protobuf.Descriptors.FieldDescriptor field) {
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
+
     @Override
     public Builder clearOneof(
-        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
+
     @Override
     public Builder setRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, Object value) {
       return super.setRepeatedField(field, index, value);
     }
+
     @Override
     public Builder addRepeatedField(
-        com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            Object value) {
       return super.addRepeatedField(field, value);
     }
+
     @Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof Rectangle) {
-        return mergeFrom((Rectangle)other);
+        return mergeFrom((Rectangle) other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -514,9 +550,9 @@ private static final long serialVersionUID = 0L;
 
     @Override
     public Builder mergeFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       Rectangle parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -533,7 +569,8 @@ private static final long serialVersionUID = 0L;
 
     private Point lo_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder> loBuilder_;
+            Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder> loBuilder_;
+
     /**
      * <pre>
      * One corner of the rectangle.
@@ -545,6 +582,7 @@ private static final long serialVersionUID = 0L;
     public boolean hasLo() {
       return loBuilder_ != null || lo_ != null;
     }
+
     /**
      * <pre>
      * One corner of the rectangle.
@@ -560,6 +598,7 @@ private static final long serialVersionUID = 0L;
         return loBuilder_.getMessage();
       }
     }
+
     /**
      * <pre>
      * One corner of the rectangle.
@@ -580,6 +619,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * One corner of the rectangle.
@@ -588,7 +628,7 @@ private static final long serialVersionUID = 0L;
      * <code>.routeguide.Point lo = 1;</code>
      */
     public Builder setLo(
-        Point.Builder builderForValue) {
+            Point.Builder builderForValue) {
       if (loBuilder_ == null) {
         lo_ = builderForValue.build();
         onChanged();
@@ -598,6 +638,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * One corner of the rectangle.
@@ -609,7 +650,7 @@ private static final long serialVersionUID = 0L;
       if (loBuilder_ == null) {
         if (lo_ != null) {
           lo_ =
-            Point.newBuilder(lo_).mergeFrom(value).buildPartial();
+                  Point.newBuilder(lo_).mergeFrom(value).buildPartial();
         } else {
           lo_ = value;
         }
@@ -620,6 +661,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * One corner of the rectangle.
@@ -638,6 +680,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * One corner of the rectangle.
@@ -646,10 +689,11 @@ private static final long serialVersionUID = 0L;
      * <code>.routeguide.Point lo = 1;</code>
      */
     public Point.Builder getLoBuilder() {
-      
+
       onChanged();
       return getLoFieldBuilder().getBuilder();
     }
+
     /**
      * <pre>
      * One corner of the rectangle.
@@ -662,9 +706,10 @@ private static final long serialVersionUID = 0L;
         return loBuilder_.getMessageOrBuilder();
       } else {
         return lo_ == null ?
-            Point.getDefaultInstance() : lo_;
+                Point.getDefaultInstance() : lo_;
       }
     }
+
     /**
      * <pre>
      * One corner of the rectangle.
@@ -673,11 +718,11 @@ private static final long serialVersionUID = 0L;
      * <code>.routeguide.Point lo = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>
-        getLoFieldBuilder() {
+            Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>
+    getLoFieldBuilder() {
       if (loBuilder_ == null) {
         loBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>(
+                Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>(
                 getLo(),
                 getParentForChildren(),
                 isClean());
@@ -688,7 +733,8 @@ private static final long serialVersionUID = 0L;
 
     private Point hi_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder> hiBuilder_;
+            Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder> hiBuilder_;
+
     /**
      * <pre>
      * The other corner of the rectangle.
@@ -700,6 +746,7 @@ private static final long serialVersionUID = 0L;
     public boolean hasHi() {
       return hiBuilder_ != null || hi_ != null;
     }
+
     /**
      * <pre>
      * The other corner of the rectangle.
@@ -715,6 +762,7 @@ private static final long serialVersionUID = 0L;
         return hiBuilder_.getMessage();
       }
     }
+
     /**
      * <pre>
      * The other corner of the rectangle.
@@ -735,6 +783,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * The other corner of the rectangle.
@@ -743,7 +792,7 @@ private static final long serialVersionUID = 0L;
      * <code>.routeguide.Point hi = 2;</code>
      */
     public Builder setHi(
-        Point.Builder builderForValue) {
+            Point.Builder builderForValue) {
       if (hiBuilder_ == null) {
         hi_ = builderForValue.build();
         onChanged();
@@ -753,6 +802,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * The other corner of the rectangle.
@@ -764,7 +814,7 @@ private static final long serialVersionUID = 0L;
       if (hiBuilder_ == null) {
         if (hi_ != null) {
           hi_ =
-            Point.newBuilder(hi_).mergeFrom(value).buildPartial();
+                  Point.newBuilder(hi_).mergeFrom(value).buildPartial();
         } else {
           hi_ = value;
         }
@@ -775,6 +825,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * The other corner of the rectangle.
@@ -793,6 +844,7 @@ private static final long serialVersionUID = 0L;
 
       return this;
     }
+
     /**
      * <pre>
      * The other corner of the rectangle.
@@ -801,10 +853,11 @@ private static final long serialVersionUID = 0L;
      * <code>.routeguide.Point hi = 2;</code>
      */
     public Point.Builder getHiBuilder() {
-      
+
       onChanged();
       return getHiFieldBuilder().getBuilder();
     }
+
     /**
      * <pre>
      * The other corner of the rectangle.
@@ -817,9 +870,10 @@ private static final long serialVersionUID = 0L;
         return hiBuilder_.getMessageOrBuilder();
       } else {
         return hi_ == null ?
-            Point.getDefaultInstance() : hi_;
+                Point.getDefaultInstance() : hi_;
       }
     }
+
     /**
      * <pre>
      * The other corner of the rectangle.
@@ -828,11 +882,11 @@ private static final long serialVersionUID = 0L;
      * <code>.routeguide.Point hi = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>
-        getHiFieldBuilder() {
+            Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>
+    getHiFieldBuilder() {
       if (hiBuilder_ == null) {
         hiBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>(
+                Point, Point.Builder, io.grpc.examples.routeguide.PointOrBuilder>(
                 getHi(),
                 getParentForChildren(),
                 isClean());
@@ -840,15 +894,16 @@ private static final long serialVersionUID = 0L;
       }
       return hiBuilder_;
     }
+
     @Override
     public final Builder setUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
     @Override
     public final Builder mergeUnknownFields(
-        final com.google.protobuf.UnknownFieldSet unknownFields) {
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
     }
 
@@ -858,6 +913,7 @@ private static final long serialVersionUID = 0L;
 
   // @@protoc_insertion_point(class_scope:routeguide.Rectangle)
   private static final Rectangle DEFAULT_INSTANCE;
+
   static {
     DEFAULT_INSTANCE = new Rectangle();
   }
@@ -867,12 +923,12 @@ private static final long serialVersionUID = 0L;
   }
 
   private static final com.google.protobuf.Parser<Rectangle>
-      PARSER = new com.google.protobuf.AbstractParser<Rectangle>() {
+          PARSER = new com.google.protobuf.AbstractParser<Rectangle>() {
     @Override
     public Rectangle parsePartialFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return new Rectangle(input, extensionRegistry);
     }
   };
